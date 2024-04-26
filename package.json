@@ -23,5 +23,8 @@
     "@storybook/react": "^8.0.9",
     "@storybook/test": "^8.0.9",
     "storybook": "^8.0.9"
+  },
+  "dependencies": {
+    "yarn": "^1.22.22"
   }
 }
