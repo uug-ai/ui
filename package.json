@@ -7,7 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_3339886e9712f2a"
+    "chromatic": "npx chromatic --project-token=chpt_3339886e9712f2a",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +29,9 @@
     "storybook": "^8.0.9"
   },
   "dependencies": {
+    "next": "^14.2.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "yarn": "^1.22.22"
   }
 }
