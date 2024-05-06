@@ -1,16 +1,17 @@
 yarn run v1.22.22
-$ storybook build --output-dir /var/folders/kk/8zyr1h993kz5sr0t6wb165b00000gn/T/chromatic--65950-QOajNL3gZJ7N
+$ storybook build --output-dir /var/folders/kk/8zyr1h993kz5sr0t6wb165b00000gn/T/chromatic--74209-9kFevlpk02N2
 @storybook/cli v8.0.9
 
-info => Cleaning outputDir: ../../../../../../var/folders/kk/8zyr1h993kz5sr0t6wb165b00000gn/T/chromatic--65950-QOajNL3gZJ7N
+info => Cleaning outputDir: ../../../../../../var/folders/kk/8zyr1h993kz5sr0t6wb165b00000gn/T/chromatic--74209-9kFevlpk02N2
 info => Loading presets
 info => Building manager..
-info => Manager built (845 ms)
+info => Manager built (684 ms)
 info => Building preview..
 info Addon-docs: using MDX3
 info => Using implicit CSS loaders
 info => Using SWC as compiler
 info => Using default Webpack5 setup
+info Using tsconfig paths for react-docgen
 WARN asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
 WARN This can impact web performance.
 WARN Assets: 
@@ -24,6 +25,6 @@ WARN       runtime~main.be623e07.iframe.bundle.js
 WARN       534.bcccac1d.iframe.bundle.js
 WARN       main.92cd805f.iframe.bundle.js
 WARN 
-info => Preview built (42 s)
-info => Output directory: /var/folders/kk/8zyr1h993kz5sr0t6wb165b00000gn/T/chromatic--65950-QOajNL3gZJ7N
-Done in 54.04s.
+info => Preview built (31 s)
+info => Output directory: /var/folders/kk/8zyr1h993kz5sr0t6wb165b00000gn/T/chromatic--74209-9kFevlpk02N2
+Done in 41.52s.
