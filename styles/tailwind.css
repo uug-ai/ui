@@ -558,8 +558,16 @@ video {
   height: 2.5rem;
 }
 
+.min-h-10 {
+  min-height: 2.5rem;
+}
+
 .w-36 {
   width: 9rem;
+}
+
+.min-w-36 {
+  min-width: 9rem;
 }
 
 .rounded-lg {
