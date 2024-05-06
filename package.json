@@ -11,7 +11,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "tailwind": "npx tailwindcss -i ./styles/input.css -o ./styles/tailwind.css --watch"
   },
   "keywords": [],
   "author": "",

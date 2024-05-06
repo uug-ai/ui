@@ -1,4 +1,6 @@
 /** @type { import('@storybook/react').Preview } */
+import '../styles/tailwind.css'
+
 const preview = {
   parameters: {
      layout: 'centered',

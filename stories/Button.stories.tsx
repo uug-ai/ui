@@ -1,36 +1,16 @@
-
-import Button from './Button';
+import Button from "./Button";
 
 export default {
   component: Button,
-  title: 'Button',
-  tags: ['autodocs'],
+  title: "Button",
+  tags: ["autodocs"],
 };
 
-export const Default = {
-  args: {
-    Button: {
-      id: '1',
-      title: 'Button',
-      state: 'Button_DARK',
-    },
-  },
-};
+const Template = (args) => <Button {...args} />;
 
-export const Light = {
-  args: {
-    Button: {
-      ...Default.args.Button,
-      state: 'Button_LIGHT',
-    },
-  },
+export const Default = Template.bind({});
+export const Light = Template.bind({});
+Light.args = {
+  backgroundColor: "blue-50",
+  color: "blue-950",
 };
-
-// export const Archived = {
-//   args: {
-//     Button: {
-//       ...Default.args.Button,
-//       state: 'Button_ARCHIVED',
-//     },
-//   },
-// };
