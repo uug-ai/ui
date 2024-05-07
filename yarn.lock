@@ -33,6 +33,7 @@ __metadata:
   version: 1.4.126
   resolution: "@aw-web-design/x-default-browser@npm:1.4.126"
   dependencies:
+    default-browser-id: "npm:3.0.0"
   bin:
     x-default-browser: bin/x-default-browser.js
   checksum: 10c0/634c7fad7a5f4df86e3fcd3a11e50034fcb6f6302281569727574cbda7532850063cb34ec328384a686ab0812f297bf301a5e2450bc7b93b5f80a006b1f2dfd7
