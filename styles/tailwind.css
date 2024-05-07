@@ -558,8 +558,24 @@ video {
   min-height: 2.5rem;
 }
 
+.w-full {
+  width: 100%;
+}
+
 .min-w-36 {
   min-width: 9rem;
+}
+
+.max-w-md {
+  max-width: 28rem;
+}
+
+.max-w-32 {
+  max-width: 8rem;
+}
+
+.text-wrap {
+  text-wrap: wrap;
 }
 
 .rounded-lg {
@@ -594,6 +610,11 @@ video {
   background-color: transparent;
 }
 
+.bg-blue-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 246 255 / var(--tw-bg-opacity));
+}
+
 .p-5 {
   padding: 1.25rem;
 }
@@ -618,6 +639,18 @@ video {
   padding-bottom: 0.75rem;
 }
 
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -628,6 +661,33 @@ video {
   line-height: 1.25rem;
 }
 
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.font-thin {
+  font-weight: 100;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
 .text-blue-50 {
   --tw-text-opacity: 1;
   color: rgb(239 246 255 / var(--tw-text-opacity));
@@ -636,6 +696,49 @@ video {
 .text-primary-950 {
   --tw-text-opacity: 1;
   color: rgb(23 37 84 / var(--tw-text-opacity));
+}
+
+.text-blue-950 {
+  --tw-text-opacity: 1;
+  color: rgb(23 37 84 / var(--tw-text-opacity));
+}
+
+.text-primary-50 {
+  --tw-text-opacity: 1;
+  color: rgb(239 246 255 / var(--tw-text-opacity));
+}
+
+.text-primary-950\/90 {
+  color: rgb(23 37 84 / 0.9);
+}
+
+.text-primary-50\/90 {
+  color: rgb(239 246 255 / 0.9);
+}
+
+.text-primary-950\/\[\.09\] {
+  color: rgb(23 37 84 / .09);
+}
+
+.text-primary-50\/\[\.09\] {
+  color: rgb(239 246 255 / .09);
+}
+
+.text-red-950\/\[\.09\] {
+  color: rgb(69 10 10 / .09);
+}
+
+.text-red-500\/\[\.09\] {
+  color: rgb(239 68 68 / .09);
+}
+
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
+.underline {
+  text-decoration-line: underline;
 }
 
 .outline {
