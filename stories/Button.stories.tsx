@@ -1,21 +1,35 @@
-import Button from "./Button";
+import { Meta, StoryObj } from "@storybook/react";
+import { Button } from "./Button";
 
-export default {
+const meta: Meta<typeof Button> = {
+  title: "Components/Button",
   component: Button,
-  title: "Button",
   tags: ["autodocs"],
-  argTypes: { handleClick: { action: "Handle click event" } },
 };
 
-const Template = (args) => <Button {...args} />;
+export default meta;
 
-export const Default = Template.bind({});
-export const Light = Template.bind({});
-Light.args = {
-  backgroundColor: "blue-50",
-  color: "blue-950",
+type Story = StoryObj<typeof meta>;
+
+export const Solid: Story = {
+  args: {
+    children: "Button",
+    variant: "solid",
+    size: "md",
+    colorscheme: "primary",
+  },
 };
-export const LongLabel = Template.bind({});
-LongLabel.args = {
-  label: "This is a button with a longer label",
+
+export const Outline: Story = {
+  args: {
+    children: "Button",
+    variant: "outline",
+  },
+};
+
+export const Light: Story = {
+  args: {
+    children: "Button",
+    variant: "light",
+  },
 };
