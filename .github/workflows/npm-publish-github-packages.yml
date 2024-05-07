@@ -12,11 +12,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - uses: borales/actions-yarn@v4
         with:
-          node-version: 18
-      - run: yarn
-      - run: yarn test
+          cmd: install
+      - uses: borales/actions-yarn@v4
+        with:
+          cmd: test
 
   publish-gpr:
     needs: build
@@ -26,11 +27,11 @@ jobs:
       packages: write
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - uses: borales/actions-yarn@v4
         with:
-          node-version: 16
-          registry-url: https://npm.pkg.github.com/
-      - run: yarn
-      - run: yarn publish
+          cmd: install
+      - uses: borales/actions-yarn@v4
+        with:
+          cmd: publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
