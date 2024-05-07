@@ -1,16 +1,14 @@
 import { cva, VariantProps } from "class-variance-authority";
-import { ComponentProps, forwardRef } from "react";
-import { cn } from "../utils";
+import { ComponentProps } from "react";
 
-const ButtonStyles = cva(
+const InputFieldStyles = cva(
   [
-    "min-w-36",
-    "min-h-10",
-    "p-5",
-    "text-lg",
+    "w-40",
+    "h-10",
     "rounded-lg",
-    "hover:cursor-pointer",
+    "text-lg",
     "focus:outline-none",
+    "hover:cursor-pointer",
   ],
   {
     variants: {
@@ -26,7 +24,6 @@ const ButtonStyles = cva(
       },
       colorscheme: {
         primary: "bg-blue-950 text-blue-50",
-        secondary: "bg-blue-50 text-blue-950",
       },
     },
     compoundVariants: [
@@ -43,8 +40,8 @@ const ButtonStyles = cva(
       },
       {
         variant: "light",
-        colorscheme: "secondary",
-        className: "hover:bg-primary-300",
+        colorscheme: "primary",
+        className: "text-primary-950 bg-primary-50 hover:bg-primary-300",
       },
     ],
     defaultVariants: {
@@ -55,15 +52,22 @@ const ButtonStyles = cva(
   }
 );
 
-type ButtonProps = ComponentProps<"button"> & VariantProps<typeof ButtonStyles>;
+type InputFieldProps = ComponentProps<"input"> &
+  VariantProps<typeof InputFieldStyles>;
 
-export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ variant, size, colorscheme, className, ...props }) => {
-    return (
-      <button
-        className={cn(ButtonStyles({ variant, size, colorscheme, className }))}
-        {...props}
-      />
-    );
-  }
-);
+export const InputField = ({
+  variant,
+  size,
+  colorscheme,
+  className,
+  ...props
+}: InputFieldProps) => {
+  return (
+    <input
+      type="text"
+      className={InputFieldStyles({ variant, size, colorscheme, className })}
+      {...props}
+      placeholder="Input"
+    />
+  );
+};

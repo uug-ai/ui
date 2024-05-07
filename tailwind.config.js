@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+import colors from "tailwindcss/colors";
+
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}", // Note the addition of the `app` directory.
@@ -7,7 +9,11 @@ module.exports = {
     "./stories/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: colors.blue,
+      },
+    },
   },
   plugins: [],
 };
