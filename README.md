@@ -23,4 +23,6 @@ Finally you can start the storybook UI using the `storybook` command.
 
     yarn storybook
 
-This will run the storybook interface on port `6006`. 
+This will run the storybook interface on port `6006`.
+
+![Storybook](./assets/images/storybook.png)
