@@ -20,6 +20,7 @@ const textStyles = cva(
         lg: "text-lg",
         xl: "text-xl",
         "2xl": "text-2xl",
+        "5xl": "text-5xl",
       },
       weight: {
         thin: "font-thin",
