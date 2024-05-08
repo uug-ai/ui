@@ -8,8 +8,8 @@ export default {
 
 const Template = (args) => <InputField {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
+export const DefaultField = Template.bind({});
+DefaultField.args = {
   backgroundColor: "blue-950",
   color: "blue-50",
 };
