@@ -1,4 +1,4 @@
-import { InputField } from "../components/input-field/input-field";
+import { InputField } from ".";
 
 export default {
   component: InputField,

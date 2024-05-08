@@ -1,10 +1,10 @@
 import { cva, VariantProps } from "class-variance-authority";
 import { forwardRef } from "react";
-import { cn } from "../utils";
+import { cn } from "../../utils";
 import {
   PolymorphicComponentPropsWithRef,
   PolymorphicRef,
-} from "../utils/types";
+} from "../../utils/types";
 
 const textStyles = cva(
   /* Add base text styling here*/ "max-w-prose text-wrap",
