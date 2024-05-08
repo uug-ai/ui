@@ -25,8 +25,8 @@ const ButtonStyles = cva(
         lg: "px-6 py-3 text-lg",
       },
       colorscheme: {
-        primary: "bg-blue-950 text-blue-50",
-        secondary: "bg-blue-50 text-blue-950",
+        primary: "bg-primary-950 text-primary-50",
+        secondary: "bg-primary-50 text-primary-950",
       },
     },
     compoundVariants: [
