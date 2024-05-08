@@ -11,12 +11,11 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
+// Children = button label
 export const Solid: Story = {
   args: {
     children: "Button",
     variant: "solid",
-    size: "md",
-    colorscheme: "primary",
   },
 };
 
@@ -31,5 +30,6 @@ export const Light: Story = {
   args: {
     children: "Button",
     variant: "light",
+    colorscheme: "secondary",
   },
 };
