@@ -16,7 +16,6 @@ const InputStyles = cva([
   "text-primary-950",
   "transition-all",
   "placeholder-shown:border",
-  "placeholder-shown:border-primary-950",
   "disabled:border-0",
   "placeholder:opacity-0",
   "focus:placeholder:opacity-100",
