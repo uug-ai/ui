@@ -7,14 +7,14 @@ export const LoginForm = () => {
   return (
     <Box className="p-8 w-96">
       <Stack className="w-96">
-        <Text as="h2" size="4xl" weight="bold" className="mb-6">
+        <Text as="h2" size="4xl" weight="bold" className="mb-8">
           Log in
         </Text>
         <Text as="label">username</Text>
         <Input type="text" placeholder="username" className="mb-4" />
         <Row>
           <Text as="label">password</Text>
-          <Text as="a" color="light" underline align="right">
+          <Text as="a" variant="link">
             forgot password?
           </Text>
         </Row>

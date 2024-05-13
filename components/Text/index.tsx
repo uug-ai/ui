@@ -10,6 +10,9 @@ const textStyles = cva(
   /* Add base text styling here*/ "max-w-prose text-wrap",
   {
     variants: {
+      variant: {
+        link: "text-primary-950/[.3] underline hover:cursor-pointer",
+      },
       color: {
         primary: "text-primary-950/[.9]",
         secondary: "text-primary-50/[.9]",
@@ -39,6 +42,13 @@ const textStyles = cva(
         true: "underline",
       },
     },
+    compoundVariants: [
+      {
+        variant: "link",
+        color: "light",
+        underline: true,
+      },
+    ],
     defaultVariants: {
       color: "primary",
       size: "base",
@@ -69,6 +79,7 @@ export const Text: TextComponent = forwardRef(
       align,
       weight,
       underline,
+      variant,
       className,
       ...props
     }: TextProps<C>,
@@ -81,9 +92,11 @@ export const Text: TextComponent = forwardRef(
         className={cn(
           textStyles({
             size,
+            color,
             weight,
             underline,
             align,
+            variant,
             className,
           })
         )}

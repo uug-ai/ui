@@ -42,3 +42,11 @@ export const Semibold: Story = {
     children: "This is a semibold text",
   },
 };
+
+export const Link: Story = {
+  args: {
+    as: "a",
+    variant: "link",
+    children: "This is a link",
+  },
+};
