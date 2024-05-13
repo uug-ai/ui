@@ -5,8 +5,8 @@ import { Stack } from "../Stack";
 
 export const LoginForm = () => {
   return (
-    <Box className="p-8 w-96">
-      <Stack className="w-96">
+    <Box className="border-r-2 min-h-screen p-8 w-4/12">
+      <Stack>
         <Text as="h2" size="4xl" weight="bold" className="mb-8">
           Log in
         </Text>

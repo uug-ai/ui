@@ -4,6 +4,9 @@ import { LoginForm } from ".";
 const meta: Meta<typeof LoginForm> = {
   title: "Layout/LoginForm",
   component: LoginForm,
+  parameters: {
+    layout: "fullscreen",
+  },
 };
 
 export default meta;
