@@ -13,6 +13,7 @@ const textStyles = cva(
       color: {
         primary: "text-primary-950/[.9]",
         secondary: "text-primary-50/[.9]",
+        light: "text-primary-950/[.5]",
       },
       size: {
         sm: "text-sm",
@@ -20,12 +21,14 @@ const textStyles = cva(
         lg: "text-lg",
         xl: "text-xl",
         "2xl": "text-2xl",
+        "4xl": "text-4xl",
         "5xl": "text-5xl",
       },
       weight: {
         thin: "font-thin",
         normal: "font-normal",
         semibold: "font-semibold",
+        bold: "font-bold",
       },
       align: {
         left: "text-left",

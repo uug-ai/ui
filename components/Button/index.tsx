@@ -4,8 +4,6 @@ import { cn } from "../../utils";
 
 const ButtonStyles = cva(
   [
-    "min-w-36",
-    "min-h-10",
     "p-5",
     "text-lg",
     "rounded-lg",
