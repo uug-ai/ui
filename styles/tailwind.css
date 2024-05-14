@@ -558,6 +558,10 @@ video {
   visibility: visible;
 }
 
+.\!visible {
+  visibility: visible !important;
+}
+
 .collapse {
   visibility: collapse;
 }
@@ -584,6 +588,14 @@ video {
 
 .mb-8 {
   margin-bottom: 2rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
 }
 
 .block {
@@ -676,6 +688,18 @@ video {
 
 .min-w-72 {
   min-width: 18rem;
+}
+
+.min-w-32 {
+  min-width: 8rem;
+}
+
+.min-w-5 {
+  min-width: 1.25rem;
+}
+
+.min-w-52 {
+  min-width: 13rem;
 }
 
 .max-w-prose {
