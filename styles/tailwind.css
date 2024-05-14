@@ -678,6 +678,18 @@ video {
   min-width: 18rem;
 }
 
+.min-w-32 {
+  min-width: 8rem;
+}
+
+.min-w-5 {
+  min-width: 1.25rem;
+}
+
+.min-w-52 {
+  min-width: 13rem;
+}
+
 .max-w-prose {
   max-width: 65ch;
 }

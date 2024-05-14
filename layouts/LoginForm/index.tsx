@@ -10,16 +10,20 @@ export const LoginForm = () => {
         <Text as="h2" size="4xl" weight="bold" className="mb-8">
           Log in
         </Text>
-        <Text as="label">username</Text>
+        <Text as="label" weight="semibold">
+          username
+        </Text>
         <Input type="text" placeholder="username" className="mb-4" />
         <Row>
-          <Text as="label">password</Text>
+          <Text as="label" weight="semibold">
+            password
+          </Text>
           <Text as="a" variant="link">
             forgot password?
           </Text>
         </Row>
         <Input type="password" placeholder="password" className="mb-4" />
-        <Button type="submit" variant="solid">
+        <Button type="submit" variant="solid" className="w-4/12">
           Sign in
         </Button>
       </Stack>
