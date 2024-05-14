@@ -6,7 +6,7 @@ type StackProps = BoxProps;
 export const Stack = ({ className, ...props }: StackProps) => {
   return (
     <Box
-      className={cn("flex flex-col items-start w-full", className)}
+      className={cn("flex flex-col items-start w-full h-full", className)}
       {...props}
     />
   );

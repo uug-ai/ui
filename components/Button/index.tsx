@@ -22,6 +22,10 @@ const ButtonStyles = cva(
         md: "px-4 py-2 text-md",
         lg: "px-6 py-3 text-lg",
       },
+      width: {
+        full: "w-full",
+        third: "w-4/12",
+      },
       colorscheme: {
         primary: "bg-primary-950 text-primary-50",
         secondary: "bg-primary-50 text-primary-950",
@@ -56,10 +60,12 @@ const ButtonStyles = cva(
 type ButtonProps = ComponentProps<"button"> & VariantProps<typeof ButtonStyles>;
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ variant, size, colorscheme, className, ...props }) => {
+  ({ variant, size, colorscheme, width, className, ...props }) => {
     return (
       <button
-        className={cn(ButtonStyles({ variant, size, colorscheme, className }))}
+        className={cn(
+          ButtonStyles({ variant, size, colorscheme, width, className })
+        )}
         {...props}
       />
     );

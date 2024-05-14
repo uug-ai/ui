@@ -13,8 +13,8 @@ const SocialsStyles = cva(["space-x-2", "flex", "flex-row", "min-w-fit"], {
       lg: "text-lg",
     },
     color: {
-      primary: "text-primary-950",
-      secondary: "text-primary-50",
+      primary: "text-primary-950 hover:text-primary-900",
+      secondary: "text-primary-50 hover:text-primary-100",
     },
   },
   defaultVariants: {
