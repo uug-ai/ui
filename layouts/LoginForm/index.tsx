@@ -14,6 +14,9 @@ export const LoginForm = () => {
         <Text as="label" weight="semibold">
           username
         </Text>
+        <Text as="label" weight="semibold">
+          username
+        </Text>
         <Input type="text" placeholder="username" className="mb-4" />
         <Row className="mb-1">
           <Text as="label" weight="semibold">

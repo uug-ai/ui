@@ -90,11 +90,11 @@ export const Text: TextComponent = forwardRef(
         ref={ref}
         className={cn(
           textStyles({
-            size,
             color,
+            size,
+            align,
             weight,
             underline,
-            align,
             variant,
             className,
           })
