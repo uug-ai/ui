@@ -27,7 +27,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ className, ...props }: InputProps, ref) => {
     return (
       <input
-        type="text"
+        type={props.type || "text"}
         ref={ref}
         onChange={(e) => console.log(e.target.value)}
         className={cn(InputStyles(), className)}

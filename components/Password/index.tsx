@@ -12,6 +12,14 @@ export const Password = forwardRef<HTMLInputElement, PasswordProps>(
     // State toggle for password visibility
     const [visible, setVisible] = useState(false);
 
-    return <Input ref={ref} type={visible ? "text" : "password"} {...props} />;
+    // Toggle password visibility
+    const toggleVisibility = () => setVisible(!visible);
+
+    return (
+      <div>
+        <Input type={visible ? "text" : "password"} />{" "}
+        <span onClick={toggleVisibility}>{visible ? "Hide" : "Show"}</span>
+      </div>
+    );
   }
 );
