@@ -13,8 +13,8 @@ const SocialsStyles = cva(["space-x-2", "flex", "flex-row", "min-w-fit"], {
       lg: "text-lg",
     },
     color: {
-      primary: "text-primary-950 hover:text-primary-900",
-      secondary: "text-primary-50 hover:text-primary-100",
+      primary: "text-primary-950",
+      secondary: "text-primary-50",
     },
   },
   defaultVariants: {
@@ -33,15 +33,18 @@ export const Socials = forwardRef<HTMLDivElement, SocialsProps>(
         {...props}
         className={cn(SocialsStyles({ className, size, color }), className)}
       >
-        <a href="https://github.com/uug-ai">
+        <a href="https://github.com/uug-ai" className="hover:opacity-75">
           <IconGithub />
         </a>
 
-        <a href="https://youtube.com/uug-ai">
+        <a href="https://youtube.com/uug-ai" className="hover:opacity-75">
           <IconYoutube />
         </a>
 
-        <a href="https://www.linkedin.com/company/uug-ai">
+        <a
+          href="https://www.linkedin.com/company/uug-ai"
+          className="hover:opacity-75"
+        >
           <IconLinkedinSquare />
         </a>
       </div>

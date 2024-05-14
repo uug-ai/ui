@@ -1,12 +1,13 @@
-import { Button, Input, Socials, Text } from "../../components";
+import { Button, Gradient, Input, Socials, Text } from "../../components";
 import { Box } from "../Box";
 import { Row } from "../Row";
 import { Stack } from "../Stack";
 
 export const LoginForm = () => {
   return (
-    <Box className="border-r-2 min-h-screen p-8 w-4/12 flex flex-col items-start bg-primary-50/15">
-      <Stack>
+    <Box className="border-r-2 min-h-screen w-4/12 flex flex-col items-start bg-primary-50/15">
+      <Gradient />
+      <Stack className="p-8">
         <Text as="h2" size="4xl" weight="bold" className="mb-8">
           Log in
         </Text>
@@ -18,7 +19,7 @@ export const LoginForm = () => {
           <Text as="label" weight="semibold">
             password
           </Text>
-          <Text as="a" variant="link">
+          <Text as="a" variant="link" color="light">
             forgot password?
           </Text>
         </Row>
@@ -27,7 +28,7 @@ export const LoginForm = () => {
           Sign in
         </Button>
       </Stack>
-      <Socials className="mt-auto self-center justify-self-end" />
+      <Socials className="mt-auto self-center justify-self-end p-8" />
     </Box>
   );
 };
