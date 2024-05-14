@@ -12,7 +12,7 @@ export const LoginForm = () => {
         </Text>
         <Text as="label">username</Text>
         <Input type="text" placeholder="username" className="mb-4" />
-        <Row>
+        <Row className="mb-1">
           <Text as="label">password</Text>
           <Text as="a" variant="link">
             forgot password?
