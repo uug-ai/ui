@@ -39,6 +39,7 @@
     "@types/babel__template": "^7.4.4",
     "@types/babel__traverse": "^7.20.5",
     "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
     "next": "^14.2.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

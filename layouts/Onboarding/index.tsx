@@ -2,10 +2,9 @@ import { Button, Input, Text } from "../../components";
 import { Box } from "../Box";
 import { Row } from "../Row";
 import { Stack } from "../Stack";
-
 export const Onboarding = () => {
   return (
-    <Box>
+    <Box className="bg-red-500">
       <Row>
         <Box className="px-8 py-12 border border-gray-300 rounded-xl">
           <Stack>
@@ -109,13 +108,15 @@ export const Onboarding = () => {
         </Button>
       </Row>
       <Box p-8>
-        <Text as="p" align="center">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum minus
-          cupiditate voluptatem laboriosam fuga laudantium, nemo corporis
-          provident veniam maiores nostrum dolores obcaecati sit asperiores
-          aperiam enim hic sed quasi recusandae dolore aut iste ea sequi
-          voluptas? Incidunt, dolore tempore!
-        </Text>
+        <Box className="bg-blue-500 ">
+          <Text as="p" align="center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum minus
+            cupiditate voluptatem laboriosam fuga laudantium, nemo corporis
+            provident veniam maiores nostrum dolores obcaecati sit asperiores
+            aperiam enim hic sed quasi recusandae dolore aut iste ea sequi
+            voluptas? Incidunt, dolore tempore!
+          </Text>
+        </Box>
         <Row>
           <Text as="p" size="sm">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum minus
