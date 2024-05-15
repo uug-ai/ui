@@ -47,6 +47,9 @@ export const Link: Story = {
   args: {
     as: "a",
     variant: "link",
+    color: "light",
+    underline: true,
+    hover: "pointer",
     children: "This is a link",
   },
 };

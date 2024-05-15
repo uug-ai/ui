@@ -11,7 +11,7 @@ const textStyles = cva(
   {
     variants: {
       variant: {
-        link: "text-primary-950/[.3] underline hover:cursor-pointer",
+        link: "underline hover:cursor-pointer hover:text-primary-950/[.8]",
       },
       color: {
         primary: "text-primary-950/[.9]",
@@ -46,7 +46,6 @@ const textStyles = cva(
       {
         variant: "link",
         color: "light",
-        underline: true,
       },
     ],
     defaultVariants: {
