@@ -1,12 +1,13 @@
 import { Button, Input, Text } from "../../components";
+import FaceScan from "../../icons/facescan";
 import { Box } from "../Box";
 import { Row } from "../Row";
 import { Stack } from "../Stack";
 export const Onboarding = () => {
   return (
-    <Box className="bg-red-500">
+    <Box className="bg-red-500 p-8">
       <Row>
-        <Box className="px-8 py-12 border border-gray-300 rounded-xl">
+        <Box className="px-8 py-12 border border-gray-300 rounded-xl p-4">
           <Stack>
             <Text
               as="h2"
@@ -103,12 +104,10 @@ export const Onboarding = () => {
             </Button>
           </Stack>
         </Box>
-        <Button type="submit" variant={"solid"} className="mt-10">
-          Register
-        </Button>
+        <FaceScan />
       </Row>
       <Box p-8>
-        <Box className="bg-blue-500 ">
+        <Box className="bg-primary-50 p-8 ">
           <Text as="p" align="center">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum minus
             cupiditate voluptatem laboriosam fuga laudantium, nemo corporis
