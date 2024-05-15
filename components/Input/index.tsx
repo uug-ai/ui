@@ -24,8 +24,8 @@ const InputStyles = cva(
   {
     variants: {
       variant: {
-        password: ""
-      },  
+        password: "",
+      },
     },
   }
 );
@@ -36,7 +36,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ className, ...props }: InputProps, ref) => {
     return (
       <input
-        type="text"
+        type={props.type || "text"}
         ref={ref}
         className={cn(InputStyles({ className }))}
         {...props}
