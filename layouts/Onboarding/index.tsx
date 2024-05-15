@@ -1,5 +1,7 @@
 import { Button, Input, Text } from "../../components";
 import FaceScan from "../../icons/facescan";
+import Help from "../../icons/help";
+import Uug from "../../icons/uug-logo";
 import { Box } from "../Box";
 import { Row } from "../Row";
 import { Stack } from "../Stack";
@@ -9,6 +11,7 @@ export const Onboarding = () => {
       <Row>
         <Box className="px-8 py-12 border border-gray-300 rounded-xl p-4">
           <Stack>
+            <Uug />
             <Text
               as="h2"
               weight={"bold"}
@@ -18,11 +21,9 @@ export const Onboarding = () => {
             >
               Register
             </Text>
-
             <Text as="span" size={"sm"} align={"center"} className="mb-8">
               Enter details below for registration
             </Text>
-
             <Text
               as="label"
               htmlFor="firstName"
@@ -53,7 +54,6 @@ export const Onboarding = () => {
               placeholder="Last Name"
               className="mb-4"
             />
-
             <Text
               as="label"
               htmlFor="e-mail"
@@ -104,7 +104,15 @@ export const Onboarding = () => {
             </Button>
           </Stack>
         </Box>
-        <FaceScan />
+        <Box>
+          <FaceScan />
+          <Row>
+            <Button type="submit" variant={"solid"} className="mt-10">
+              Register
+            </Button>
+            <Help />
+          </Row>
+        </Box>
       </Row>
       <Box p-8>
         <Box className="bg-primary-50 p-8 ">
