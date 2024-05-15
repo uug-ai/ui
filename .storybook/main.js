@@ -1,6 +1,10 @@
 /** @type { import('@storybook/nextjs').StorybookConfig } */
 const config = {
-  stories: ["../***/**/*.mdx", "../***/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  stories: [
+    "../components/**/*.stories.@(js|jsx|ts|tsx)",
+    "../layouts/**/*.stories.@(js|jsx|ts|tsx)",
+  ],
+
   addons: [
     "@storybook/addon-onboarding",
     "@storybook/addon-links",

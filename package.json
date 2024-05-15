@@ -36,6 +36,8 @@
   "dependencies": {
     "@storybook/manager-api": "^8.0.10",
     "@storybook/theming": "^8.0.10",
+    "@types/babel__template": "^7.4.4",
+    "@types/babel__traverse": "^7.20.5",
     "class-variance-authority": "^0.7.0",
     "next": "^14.2.3",
     "react": "^18.3.1",
