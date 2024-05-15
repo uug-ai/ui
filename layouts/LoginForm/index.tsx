@@ -1,11 +1,18 @@
-import { Button, Gradient, Input, Socials, Text } from "../../components";
+import {
+  Button,
+  Gradient,
+  Input,
+  Password,
+  Socials,
+  Text,
+} from "../../components";
 import { Box } from "../Box";
 import { Row } from "../Row";
 import { Stack } from "../Stack";
 
 export const LoginForm = () => {
   return (
-    <Box className="border-r-2 min-h-screen w-4/12 flex flex-col items-start bg-primary-50/15">
+    <Box className="shadow-inner min-h-screen min-w-fit max-w-96 w-4/12 flex flex-col items-start bg-primary-50/15">
       <Gradient />
       <Stack className="p-8">
         <Text as="h2" size="4xl" weight="bold" className="mb-8">
@@ -23,7 +30,7 @@ export const LoginForm = () => {
             forgot password?
           </Text>
         </Row>
-        <Input type="password" placeholder="password" className="mb-4" />
+        <Password placeholder="password" className="mb-4" />
         <Button type="submit" variant="solid" width="third">
           Sign in
         </Button>

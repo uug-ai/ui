@@ -24,7 +24,7 @@ const ButtonStyles = cva(
       },
       width: {
         full: "w-full",
-        third: "w-4/12",
+        third: "min-w-1/3",
       },
       colorscheme: {
         primary: "bg-primary-950 text-primary-50",
