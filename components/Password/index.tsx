@@ -33,9 +33,9 @@ export const Password = forwardRef<HTMLInputElement, PasswordProps>(
           aria-label="Toggle password visibility"
         >
           {visible ? (
-            <IconEye className="opacity-25" />
+            <IconEye className="opacity-10" />
           ) : (
-            <IconEye className="opacity-75" />
+            <IconEye className="opacity-60" />
           )}
         </button>
       </div>
