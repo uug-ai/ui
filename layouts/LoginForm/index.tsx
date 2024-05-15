@@ -11,10 +11,7 @@ export const LoginForm = () => {
         <Text as="h2" size="4xl" weight="bold" className="mb-8">
           Log in
         </Text>
-        <Text as="label" weight="semibold">
-          username
-        </Text>
-        <Text as="label" weight="semibold">
+        <Text as="label" weight="semibold" className="mb-1">
           username
         </Text>
         <Input type="text" placeholder="username" className="mb-4" />
