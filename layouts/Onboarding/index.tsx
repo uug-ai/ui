@@ -7,18 +7,12 @@ import { Row } from "../Row";
 import { Stack } from "../Stack";
 export const Onboarding = () => {
   return (
-    <Box className="bg-red-500 p-8">
+    <Box className="bg-primary-50 p-8">
       <Row>
         <Box className="px-8 py-12 border border-gray-300 rounded-xl p-4">
           <Stack>
-            <Uug />
-            <Text
-              as="h2"
-              weight={"bold"}
-              align={"center"}
-              size={"2xl"}
-              className="mb-2"
-            >
+            <Uug className="" />
+            <Text as="h2" weight={"bold"} align={"center"} size={"2xl"}>
               Register
             </Text>
             <Text as="span" size={"sm"} align={"center"} className="mb-8">
@@ -115,8 +109,8 @@ export const Onboarding = () => {
         </Box>
       </Row>
       <Box p-8>
-        <Box className="bg-primary-50 p-8 ">
-          <Text as="p" align="center">
+        <Box className="p-8 text-center ">
+          <Text as="p" className="text-center">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum minus
             cupiditate voluptatem laboriosam fuga laudantium, nemo corporis
             provident veniam maiores nostrum dolores obcaecati sit asperiores
@@ -125,13 +119,13 @@ export const Onboarding = () => {
           </Text>
         </Box>
         <Row>
-          <Text as="p" size="sm">
+          <Text as="p" size="sm" className="p-8">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum minus
             cupiditate voluptatem laboriosam.Lorem ipsum dolor sit amet
             consectetur adipisicing elit. Illum minus cupiditate voluptatem
             laboriosam.
           </Text>
-          <Text as="p" size="sm">
+          <Text as="p" size="sm" className="p-8">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum minus
             cupiditate voluptatem laboriosam.Lorem ipsum dolor sit amet
             consectetur adipisicing elit. Illum minus cupiditate voluptatem
