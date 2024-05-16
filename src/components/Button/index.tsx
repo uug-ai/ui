@@ -2,7 +2,7 @@ import { cva, VariantProps } from "class-variance-authority";
 import { ComponentProps, forwardRef } from "react";
 import { cn } from "../../utils";
 
-const LogoStyles = cva(
+const ButtonStyles = cva(
   [
     "p-5",
     "text-lg",
@@ -13,13 +13,18 @@ const LogoStyles = cva(
   {
     variants: {
       variant: {
-        white: "",
-        black: "",
+        solid: "",
+        outline: "border-2",
+        light: "transition-colors duration-300",
       },
       size: {
         sm: "px-4 py-2 text-sm",
         md: "px-4 py-2 text-md",
         lg: "px-6 py-3 text-lg",
+      },
+      width: {
+        full: "w-full",
+        third: "min-w-1/3",
       },
       colorscheme: {
         primary: "bg-primary-950 text-primary-50",
@@ -28,30 +33,40 @@ const LogoStyles = cva(
     },
     compoundVariants: [
       {
-        variant: "white",
+        variant: "solid",
         colorscheme: "primary",
         className: "bg-primary-950 hover:bg-primary-900",
       },
       {
-        variant: "black",
+        variant: "outline",
         colorscheme: "primary",
         className:
           "text-primary-950 border-primary-950 bg-transparent hover:bg-primary-50",
       },
+      {
+        variant: "light",
+        colorscheme: "secondary",
+        className: "hover:bg-primary-300",
+      },
     ],
     defaultVariants: {
-      variant: "white",
+      variant: "solid",
+      size: "md",
+      colorscheme: "primary",
     },
   }
 );
 
-type LogoProps = ComponentProps<"div"> & VariantProps<typeof LogoStyles>;
+type ButtonProps = ComponentProps<"button"> & VariantProps<typeof ButtonStyles>;
 
-export const Logo = forwardRef<HTMLButtonElement, LogoProps>(
-  ({ variant, size, colorscheme, className, ...props }) => {
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ variant, size, colorscheme, width, className, ...props }, ref) => {
     return (
-      <div
-        className={cn(LogoStyles({ variant, size, colorscheme, className }))}
+      <button
+        className={cn(
+          ButtonStyles({ variant, size, colorscheme, width, className })
+        )}
+        ref={ref}
         {...props}
       />
     );
