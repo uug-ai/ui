@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Logo } from ".";
+import Logo from "../../icons/logo";
 
 const meta: Meta<typeof Logo> = {
   title: "Components/Logo",
@@ -12,14 +12,16 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 // Children = button label
-export const White: Story = {
-  args: {
-    variant: "white",
-  },
-};
+// export const White: Story = {
+//   args: {
+//     variant: "white",
+//   },
+// };
 
-export const Black: Story = {
-  args: {
-    variant: "black",
-  },
-};
+// export const Black: Story = {
+//   args: {
+//     variant: "black",
+//   },
+// };
+
+export const Default: Story = {};
