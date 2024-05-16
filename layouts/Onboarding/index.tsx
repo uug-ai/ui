@@ -1,138 +1,122 @@
-import { Button, Input, Text } from "../../components";
+import { Button, Gradient, Input, Text } from "../../components";
 import FaceScan from "../../icons/facescan";
 import Help from "../../icons/help";
-import Uug from "../../icons/uug-logo";
+import Logo from "../../icons/logo";
 import { Box } from "../Box";
 import { Row } from "../Row";
 import { Stack } from "../Stack";
-export const Onboarding = () => {
+
+const Onboarding = () => {
   return (
-    <Box className="bg-primary-50 p-8">
-      <Row>
-        <Box className="px-8 py-12 border border-gray-300 rounded-xl p-4">
-          <Stack>
-            <Uug className="" />
-            <Text as="h2" weight={"bold"} align={"center"} size={"2xl"}>
-              Register
-            </Text>
-            <Text as="span" size={"sm"} align={"center"} className="mb-8">
-              Enter details below for registration
-            </Text>
-            <Text
-              as="label"
-              htmlFor="firstName"
-              size={"sm"}
-              weight={"normal"}
-              className="mb-1.5"
-            >
-              First Name
-            </Text>
-            <Input
-              type="text"
-              id="First Name"
-              placeholder="First Name"
-              className="mb-4"
-            />
-            <Text
-              as="label"
-              htmlFor="lastName"
-              size={"sm"}
-              weight={"normal"}
-              className="mb-1.5"
-            >
-              Last Name
-            </Text>
-            <Input
-              type="text"
-              id="Last Name"
-              placeholder="Last Name"
-              className="mb-4"
-            />
-            <Text
-              as="label"
-              htmlFor="e-mail"
-              size={"sm"}
-              weight={"normal"}
-              className="mb-1.5"
-            >
-              E-mail
-            </Text>
-            <Input
-              type="text"
-              id="e-mail"
-              placeholder="E-mail"
-              className="mb-4"
-            />
-            <Text
-              as="label"
-              htmlFor="phoneNumber"
-              size={"sm"}
-              weight={"normal"}
-              className="mb-1.5"
-            >
-              Phone Number
-            </Text>
-            <Input
-              type="text"
-              id="phoneNumber"
-              placeholder="Phone Number"
-              className="mb-4"
-            />
-            <Text
-              as="label"
-              htmlFor="dateOfBirth"
-              size={"sm"}
-              weight={"normal"}
-              className="mb-1.5"
-            >
-              Date Of Birth
-            </Text>
-            <Input
-              type="date"
-              id="dateOfBirth"
-              placeholder="Phone Number"
-              className="mb-4"
-            />
-            <Button type="submit" variant={"solid"} className="mt-10">
-              Register
-            </Button>
-          </Stack>
-        </Box>
-        <Box>
-          <FaceScan />
-          <Row>
-            <Button type="submit" variant={"solid"} className="mt-10">
-              Register
-            </Button>
-            <Help />
-          </Row>
-        </Box>
-      </Row>
-      <Box p-8>
-        <Box className="p-8 text-center ">
-          <Text as="p" className="text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum minus
-            cupiditate voluptatem laboriosam fuga laudantium, nemo corporis
-            provident veniam maiores nostrum dolores obcaecati sit asperiores
-            aperiam enim hic sed quasi recusandae dolore aut iste ea sequi
-            voluptas? Incidunt, dolore tempore!
-          </Text>
-        </Box>
-        <Row>
-          <Text as="p" size="sm" className="p-8">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum minus
-            cupiditate voluptatem laboriosam.Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Illum minus cupiditate voluptatem
-            laboriosam.
-          </Text>
-          <Text as="p" size="sm" className="p-8">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum minus
-            cupiditate voluptatem laboriosam.Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Illum minus cupiditate voluptatem
-            laboriosam.
-          </Text>
+    <Box className="bg-primary-50">
+      <Stack>
+        <Gradient />
+        <Row className="h-screen">
+          <FormSection />
+          <FaceScanSection />
         </Row>
-      </Box>
+        <InfoSection />
+      </Stack>
     </Box>
   );
 };
+
+const FormSection = () => (
+  <Stack className="pl-10 pt-10 items-center">
+    <Box>
+      <Logo />
+      <Box className="mb-4">
+        <Text as="label" weight="semibold" className="mb-1">
+          First Name
+        </Text>
+        <Input type="text" placeholder="First Name" />
+      </Box>
+      <Box className="mb-4">
+        <Text as="label" weight="semibold" className="mb-1">
+          Last Name
+        </Text>
+        <Input type="text" placeholder="Last Name" />
+      </Box>
+      <Box className="mb-4">
+        <Text as="label" weight="semibold" className="mb-1">
+          E-Mail
+        </Text>
+        <Input type="text" placeholder="E-Mail" />
+      </Box>
+      <Box className="mb-4">
+        <Text as="label" weight="semibold" className="mb-1">
+          Phone Number
+        </Text>
+        <Input type="text" placeholder="Phone Number" />
+      </Box>
+      <Box className="mb-4">
+        <Text as="label" weight="semibold" className="mb-1">
+          Date of Birth
+        </Text>
+        <Input type="date" />
+      </Box>
+      <Button type="submit" variant="solid" width="third">
+        Register
+      </Button>
+    </Box>
+  </Stack>
+);
+
+const FaceScanSection = () => (
+  <Stack className="items-center place-content-center">
+    <Box>
+      <FaceScan />
+    </Box>
+    <Box>
+      <Row className="pt-10">
+        <Box>
+          <Button type="submit" variant="solid" width="third">
+            Scan Face
+          </Button>
+        </Box>
+        <Box>
+          <Help />
+        </Box>
+      </Row>
+    </Box>
+  </Stack>
+);
+
+const InfoSection = () => (
+  <Stack className="p-14 text-center">
+    <Box className="p-10 shadow-md rounded-md bg-white text-xl">
+      <Text as="a" weight="bold" className="shadow-inner bg-white" />
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam voluptates,
+      quos in debitis illo architecto nesciunt obcaecati, iure eos quia dolore
+      natus delectus quibusdam ab rem cumque tenetur expedita doloremque fuga
+      reiciendis asperiores totam suscipit! Lorem ipsum dolor sit, amet
+      consectetur adipisicing elit. Sequi voluptas perspiciatis esse minima at
+      quam earum architecto neque, eos ad assumenda excepturi quisquam deleniti
+      deserunt commodi eligendi saepe ex ratione illum ipsum sit. Numquam, fuga!
+    </Box>
+    <Row className="pt-14">
+      <Box className="w-1/2">
+        <Text as="a" />
+        About UUG.Ai
+      </Box>
+      <Box className="w-1/2">
+        <Text as="a" />
+        About UUG.Ai
+      </Box>
+    </Row>
+    <Row className="text-sm text-center w-full space-x-10">
+      <Text as="a" />
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus vero
+      reiciendis quae porro, voluptates odit. Culpa ipsam beatae voluptas vitae
+      est repudiandae, nulla atque, reiciendis labore, voluptatibus eum dolorem!
+      Id inventore quidem ipsam impedit possimus?
+      <Text as="a" />
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia corrupti
+      aperiam, maiores nam nulla voluptatem enim suscipit, voluptatibus sunt,
+      deserunt blanditiis? Pariatur soluta, aliquid sunt, placeat officia quis
+      id libero temporibus nihil earum voluptas quasi!
+    </Row>
+  </Stack>
+);
+
+export default Onboarding;
