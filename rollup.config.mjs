@@ -1,7 +1,6 @@
 import { babel } from "@rollup/plugin-babel";
 import commonjs from "@rollup/plugin-commonjs";
 import resolve from "@rollup/plugin-node-resolve";
-import terser from "@rollup/plugin-terser";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 
 // This is required to read package.json file when
@@ -9,6 +8,7 @@ import peerDepsExternal from "rollup-plugin-peer-deps-external";
 // https://rollupjs.org/command-line-interface/#importing-package-json
 import typescript from "@rollup/plugin-typescript";
 import { createRequire } from "node:module";
+import { dts } from "rollup-plugin-dts";
 const requireFile = createRequire(import.meta.url);
 const packageJson = requireFile("./package.json");
 
@@ -34,12 +34,12 @@ export default [
         extensions: [".js", ".jsx", ".ts", "tsx"],
       }),
       commonjs(),
-      terser(),
       babel({
         extensions: [".js", ".jsx", ".ts", ".tsx"],
         exclude: "node_modules/**",
       }),
-      typescript(),
+      typescript({ tsconfig: "./tsconfig.json" }),
+      dts(),
     ],
     external: ["react", "react-dom"],
   },

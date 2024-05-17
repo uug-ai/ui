@@ -1,16 +1,14 @@
-import { VariantProps, cva } from "class-variance-authority";
-import { ComponentProps, forwardRef, useState } from "react";
+import { VariantProps } from "class-variance-authority";
+import { forwardRef, useState } from "react";
 import { cn } from "../../utils";
-
-import { Input } from "../Input";
+import { InputProps, InputStyles } from "../Input";
 import IconEye from "./eyeIcon";
 
 // Add style to show/hide button in abosolute position on the right
 // side of the input field.
-const PasswordStyles = cva([]);
+const PasswordStyles = InputStyles;
 
-type PasswordProps = ComponentProps<"input"> &
-  VariantProps<typeof PasswordStyles>;
+type PasswordProps = InputProps & VariantProps<typeof PasswordStyles>;
 
 export const Password = forwardRef<HTMLInputElement, PasswordProps>(
   ({ className, ...props }: PasswordProps, ref) => {
@@ -22,7 +20,7 @@ export const Password = forwardRef<HTMLInputElement, PasswordProps>(
 
     return (
       <div className="relative w-full">
-        <Input
+        <input
           type={visible ? "text" : "password"}
           className={cn(className)}
           ref={ref}

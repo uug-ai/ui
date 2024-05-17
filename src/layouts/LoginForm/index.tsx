@@ -18,19 +18,24 @@ export const LoginForm = () => {
         <Text as="h2" size="4xl" weight="bold" className="mb-8">
           Log in
         </Text>
-        <Text as="label" weight="semibold" className="mb-1">
+        <Text as="label" htmlFor="username" weight="semibold" className="mb-1">
           username
         </Text>
-        <Input type="text" placeholder="username" className="mb-4" />
+        <Input
+          type="text"
+          id="username"
+          placeholder="username"
+          className="mb-4"
+        />
         <Row className="mb-1">
-          <Text as="label" weight="semibold">
+          <Text as="label" htmlFor="password" weight="semibold">
             password
           </Text>
           <Text as="a" variant="link" color="light">
             forgot password?
           </Text>
         </Row>
-        <Password placeholder="password" className="mb-4" />
+        <Password placeholder="password" id="username" className="mb-4" />
         <Button type="submit" variant="solid" width="third">
           Sign in
         </Button>
