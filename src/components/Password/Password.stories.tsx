@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Password as Field } from ".";
+import Password from "./Password";
 
-const meta: Meta<typeof Field> = {
+const meta: Meta<typeof Password> = {
   title: "Components/Password",
-  component: Field,
+  component: Password,
   tags: ["autodocs"],
 };
 
@@ -11,7 +11,7 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Password: Story = {
+export const P: Story = {
   args: {
     placeholder: "Password",
   },

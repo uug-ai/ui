@@ -25,7 +25,7 @@ const SocialsStyles = cva(["space-x-2", "flex", "flex-row", "min-w-fit"], {
 
 type SocialsProps = ComponentProps<"div"> & VariantProps<typeof SocialsStyles>;
 
-export const Socials = forwardRef<HTMLDivElement, SocialsProps>(
+const Socials = forwardRef<HTMLDivElement, SocialsProps>(
   ({ className, size, color, ...props }: SocialsProps, ref) => {
     return (
       <div
@@ -51,3 +51,5 @@ export const Socials = forwardRef<HTMLDivElement, SocialsProps>(
     );
   }
 );
+
+export default Socials;

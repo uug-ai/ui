@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Gradient } from ".";
+import Gradient from "./Gradient";
 
 const meta: Meta<typeof Gradient> = {
   title: "Components/Gradient",

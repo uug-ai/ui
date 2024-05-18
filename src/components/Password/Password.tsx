@@ -1,7 +1,7 @@
 import { VariantProps } from "class-variance-authority";
 import { forwardRef, useState } from "react";
 import { cn } from "../../utils";
-import { InputProps, InputStyles } from "../Input";
+import { InputProps, InputStyles } from "../Input/Input";
 import IconEye from "./eyeIcon";
 
 // Add style to show/hide button in abosolute position on the right
@@ -10,7 +10,7 @@ const PasswordStyles = InputStyles;
 
 type PasswordProps = InputProps & VariantProps<typeof PasswordStyles>;
 
-export const Password = forwardRef<HTMLInputElement, PasswordProps>(
+const Password = forwardRef<HTMLInputElement, PasswordProps>(
   ({ className, ...props }: PasswordProps, ref) => {
     // State toggle for password visibility
     const [visible, setVisible] = useState(false);
@@ -41,3 +41,5 @@ export const Password = forwardRef<HTMLInputElement, PasswordProps>(
     );
   }
 );
+
+export default Password;

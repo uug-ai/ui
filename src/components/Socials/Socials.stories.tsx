@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Socials } from ".";
+import Socials from "./Socials";
 
 const meta: Meta<typeof Socials> = {
   title: "Components/Socials",

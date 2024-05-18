@@ -2,7 +2,6 @@ import { cva, VariantProps } from "class-variance-authority";
 import { ComponentProps, forwardRef } from "react";
 import { cn } from "../../utils";
 
-
 const LogoStyles = cva(
   [
     "p-5",
@@ -48,7 +47,7 @@ const LogoStyles = cva(
 
 type LogoProps = ComponentProps<"div"> & VariantProps<typeof LogoStyles>;
 
-export const Logo = forwardRef<HTMLButtonElement, LogoProps>(
+const Logo = forwardRef<HTMLButtonElement, LogoProps>(
   ({ variant, size, colorscheme, className, ...props }) => {
     return (
       <div
@@ -58,3 +57,5 @@ export const Logo = forwardRef<HTMLButtonElement, LogoProps>(
     );
   }
 );
+
+export default Logo;
