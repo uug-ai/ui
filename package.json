@@ -9,7 +9,6 @@
   "files": [
     "/lib"
   ],
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
