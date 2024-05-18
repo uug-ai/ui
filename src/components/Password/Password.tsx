@@ -22,7 +22,7 @@ const Password = forwardRef<HTMLInputElement, PasswordProps>(
       <div className="relative w-full">
         <input
           type={visible ? "text" : "password"}
-          className={cn(className)}
+          className={cn(PasswordStyles({ className }))}
           ref={ref}
           {...props}
         />{" "}
