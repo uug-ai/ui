@@ -4,9 +4,9 @@ import Input from "../../components/Input";
 import Password from "../../components/Password";
 import Socials from "../../components/Socials";
 //import Text from "../../components/Text";
-import { Box } from "../Box";
-import { Row } from "../Row";
-import { Stack } from "../Stack";
+import Box from "../../components/Box";
+import Row from "../../components/Row";
+import Stack from "../../components/Stack";
 
 export const LoginForm = () => {
   return (

@@ -11,7 +11,7 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const P: Story = {
+export const Hidden: Story = {
   args: {
     placeholder: "Password",
   },

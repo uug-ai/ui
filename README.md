@@ -31,4 +31,10 @@ This will run the storybook interface on port `6006`.
 
 [Killian] document the publishing process...
 
+Create file.. add access token
+
+    .npm...
+
+Next run command..
+
     yarn npm publish --access public
