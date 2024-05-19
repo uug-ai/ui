@@ -26,3 +26,9 @@ Finally you can start the storybook UI using the `storybook` command.
 This will run the storybook interface on port `6006`.
 
 ![Storybook](./assets/images/storybook.png)
+
+## Publish
+
+[Killian] document the publishing process...
+
+    yarn npm publish --access public
