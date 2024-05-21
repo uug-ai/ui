@@ -11,7 +11,7 @@ const Onboarding = () => {
     <Box className="bg-primary-50">
       <Stack>
         <Gradient />
-        <Row className="h-screen">
+        <Row className="w-full justify-center pt-14 px-10">
           <FormSection />
           <FaceScanSection />
         </Row>
@@ -22,38 +22,38 @@ const Onboarding = () => {
 };
 
 const FormSection = () => (
-  <Stack className="pl-10 pt-10 items-center">
+  <Stack className="w-1/2 flex items-center place-content-center">
     <Box>
       <Logo />
       <Box className="mb-4">
         <Text as="label" weight="semibold" className="mb-1">
           First Name
         </Text>
-        <Input type="text" placeholder="First Name" />
+        <Input type="text" placeholder="First Name" className="bg-white" />
       </Box>
       <Box className="mb-4">
         <Text as="label" weight="semibold" className="mb-1">
           Last Name
         </Text>
-        <Input type="text" placeholder="Last Name" />
+        <Input type="text" placeholder="Last Name" className="bg-white" />
       </Box>
       <Box className="mb-4">
         <Text as="label" weight="semibold" className="mb-1">
           E-Mail
         </Text>
-        <Input type="text" placeholder="E-Mail" />
+        <Input type="text" placeholder="E-Mail" className="bg-white" />
       </Box>
       <Box className="mb-4">
         <Text as="label" weight="semibold" className="mb-1">
           Phone Number
         </Text>
-        <Input type="text" placeholder="Phone Number" />
+        <Input type="text" placeholder="Phone Number" className="bg-white" />
       </Box>
       <Box className="mb-4">
         <Text as="label" weight="semibold" className="mb-1">
           Date of Birth
         </Text>
-        <Input type="date" />
+        <Input type="date" className="bg-white" />
       </Box>
       <Button type="submit" variant="solid" width="third">
         Register
@@ -63,12 +63,12 @@ const FormSection = () => (
 );
 
 const FaceScanSection = () => (
-  <Stack className="items-center place-content-center">
+  <Stack className="w-1/2 h-fit flex items-center place-content-center">
     <Box>
       <FaceScan />
     </Box>
-    <Box>
-      <Row className="pt-10">
+    <Box className="pt-10 w-full">
+      <Row className="justify-center">
         <Box>
           <Button type="submit" variant="solid" width="third">
             Scan Face
@@ -83,16 +83,13 @@ const FaceScanSection = () => (
 );
 
 const InfoSection = () => (
-  <Stack className="p-14 text-center">
-    <Box className="p-10 shadow-md rounded-md bg-white text-xl">
+  <Stack className="p-14 text-center items-center place-content-center">
+    <Box className="p-10 shadow-md rounded-md bg-white text-xl w-full ">
       <Text as="a" weight="bold" className="shadow-inner bg-white" />
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam voluptates,
-      quos in debitis illo architecto nesciunt obcaecati, iure eos quia dolore
-      natus delectus quibusdam ab rem cumque tenetur expedita doloremque fuga
-      reiciendis asperiores totam suscipit! Lorem ipsum dolor sit, amet
-      consectetur adipisicing elit. Sequi voluptas perspiciatis esse minima at
-      quam earum architecto neque, eos ad assumenda excepturi quisquam deleniti
-      deserunt commodi eligendi saepe ex ratione illum ipsum sit. Numquam, fuga!
+      Hello, this is a registration from where you can register with a video of
+      yourself! <br />
+      We will use this video to create biometrics, so you get acces into the
+      company and won't need to use a badge or card.
     </Box>
     <Row className="pt-14">
       <Box className="w-1/2">
