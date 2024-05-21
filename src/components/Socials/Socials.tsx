@@ -1,9 +1,9 @@
 import { VariantProps, cva } from "class-variance-authority";
 import { ComponentProps, forwardRef } from "react";
 import { cn } from "../../utils";
-import IconGithub from "./github";
-import IconLinkedinSquare from "./linkedin";
-import IconYoutube from "./youtube";
+import IconGithub from "../icons/github";
+import IconLinkedinSquare from "../icons/linkedin";
+import IconYoutube from "../icons/youtube";
 
 const SocialsStyles = cva(["space-x-2", "flex", "flex-row", "min-w-fit"], {
   variants: {

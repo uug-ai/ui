@@ -12,14 +12,16 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 // Children = button label
-export const White: Story = {
-  args: {
-    variant: "white",
-  },
-};
+export const Default: Story = {};
 
-export const Black: Story = {
-  args: {
-    variant: "black",
-  },
-};
+// export const White: Story = {
+//   args: {
+//     variant: "white",
+//   },
+// };
+
+// export const Black: Story = {
+//   args: {
+//     variant: "black",
+//   },
+// };

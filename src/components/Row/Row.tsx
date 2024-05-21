@@ -6,7 +6,7 @@ type RowProps = BoxProps;
 const Row = ({ className, ...props }: RowProps) => {
   return (
     <Box
-      className={cn("flex flex-row justify-between w-full", className)}
+      className={cn("flex flex-row  w-full", className)}
       {...props}
     />
   );
