@@ -1,6 +1,6 @@
 {
   "name": "@uug-ai/ui",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "description": "Storybook design system for UUG.AI",
   "repository": "https://github.com/uug-ai/ui.git",
   "main": "lib/index.js",
