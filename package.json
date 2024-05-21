@@ -1,6 +1,6 @@
 {
   "name": "@uug-ai/ui",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "description": "Storybook design system for UUG.AI",
   "repository": "https://github.com/uug-ai/ui.git",
   "main": "lib/index.js",
@@ -16,6 +16,7 @@
     "chromatic": "npx chromatic --project-token=chpt_3339886e9712f2a",
     "rollup": "rollup",
     "build": "rollup --config",
+    "build-local": "rollup --config && cp -r lib ../facial-access-control/ui/node_modules/@uug-ai/ui",
     "watch": "rollup -c -w",
     "tailwind": "npx tailwindcss -i ./src/index.css -o ./styles/tailwind.css --watch"
   },
