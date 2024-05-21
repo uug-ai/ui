@@ -25,7 +25,7 @@ export const LoginForm = () => {
           placeholder="username"
           className="mb-4"
         />
-        <Row className="mb-1">
+        <Row className="mb-1 justify-between">
           <Text as="label" weight="semibold">
             password
           </Text>
