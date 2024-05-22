@@ -1,5 +1,6 @@
-import { cva } from "class-variance-authority";
+import { VariantProps, cva } from "class-variance-authority";
 import { ReactElement } from "react";
+import { cn } from "../../utils";
 
 const TableStyles = cva(["table table-auto border-collapse w-full"], {
   variants: {
@@ -28,9 +29,9 @@ export interface ColumnProps<T> {
 type Props<T> = {
   columns: ColumnProps<T>[];
   data?: T[];
-};
+} & VariantProps<typeof TableStyles>;
 
-const Table = <T,>({ data, columns }: Props<T>) => {
+const Table = <T,>({ data, columns, size, colors }: Props<T>) => {
   const headers = columns.map((column, index) => {
     return (
       <th key={`header-${index}`} className="">
@@ -62,7 +63,7 @@ const Table = <T,>({ data, columns }: Props<T>) => {
   );
 
   return (
-    <table className="">
+    <table className={cn(TableStyles({ size, colors }), className)}>
       <thead className="">
         <tr>{headers}</tr>
       </thead>
