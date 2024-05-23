@@ -69,6 +69,6 @@ const columns: Array<ColumnProps<Data>> = [
 export const Default: Story = {
   args: {
     data,
-    columns,
+    columns: columns as Array<ColumnProps<unknown>>,
   },
 };

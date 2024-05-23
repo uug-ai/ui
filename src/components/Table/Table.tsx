@@ -30,8 +30,8 @@ export interface ColumnProps<T> {
 }
 
 type Props<T> = {
-  columns: ColumnProps<T>[];
-  data?: T[];
+  columns: Array<ColumnProps<T>>;
+  data?: Array<T>;
 } & VariantProps<typeof TableStyles>;
 
 const Table = <T,>({ data, columns, size, colors }: Props<T>) => {
