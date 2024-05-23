@@ -586,6 +586,19 @@ video {
   z-index: 0 !important;
 }
 
+.m-8 {
+  margin: 2rem;
+}
+
+.m-10 {
+  margin: 2.5rem;
+}
+
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -686,6 +699,23 @@ video {
   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
 }
 
+.border-spacing-1 {
+  --tw-border-spacing-x: 0.25rem;
+  --tw-border-spacing-y: 0.25rem;
+  border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+}
+
+.border-spacing-5 {
+  --tw-border-spacing-x: 1.25rem;
+  --tw-border-spacing-y: 1.25rem;
+  border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+}
+
+.border-spacing-y-1 {
+  --tw-border-spacing-y: 0.25rem;
+  border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -728,6 +758,12 @@ video {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
 .self-center {
@@ -774,6 +810,10 @@ video {
   border-bottom-width: 2px;
 }
 
+.border-b-4 {
+  border-bottom-width: 4px;
+}
+
 .border-primary-950 {
   --tw-border-opacity: 1;
   border-color: rgb(8 47 73 / var(--tw-border-opacity));
@@ -781,6 +821,34 @@ video {
 
 .border-primary-950\/10 {
   border-color: rgb(8 47 73 / 0.1);
+}
+
+.border-indigo-500\/100 {
+  border-color: rgb(99 102 241 / 1);
+}
+
+.border-primary-950\/50 {
+  border-color: rgb(8 47 73 / 0.5);
+}
+
+.border-primary-950\/25 {
+  border-color: rgb(8 47 73 / 0.25);
+}
+
+.border-primary-950\/\[\] {
+  border-color: rgb(8 47 73 / );
+}
+
+.border-primary-950\/\[\2c \] {
+  border-color: rgb(8 47 73 / ,);
+}
+
+.border-primary-950\/\[\.10\] {
+  border-color: rgb(8 47 73 / .10);
+}
+
+.border-primary-950\/\[\.20\] {
+  border-color: rgb(8 47 73 / .20);
 }
 
 .bg-gray-50 {
@@ -848,6 +916,10 @@ video {
 
 .p-8 {
   padding: 2rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
 }
 
 .px-10 {
@@ -958,6 +1030,22 @@ video {
 
 .font-thin {
   font-weight: 100;
+}
+
+.leading-8 {
+  line-height: 2rem;
+}
+
+.leading-4 {
+  line-height: 1rem;
+}
+
+.leading-10 {
+  line-height: 2.5rem;
+}
+
+.leading-6 {
+  line-height: 1.5rem;
 }
 
 .text-primary-50 {

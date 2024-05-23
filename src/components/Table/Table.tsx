@@ -2,23 +2,26 @@ import { VariantProps, cva } from "class-variance-authority";
 import { ReactElement } from "react";
 import { cn } from "../../utils";
 
-const TableStyles = cva(["table table-auto border-collapse w-full"], {
-  variants: {
-    size: {
-      sm: "text-sm",
-      md: "text-base",
-      lg: "text-lg",
+const TableStyles = cva(
+  [" table-auto w-full border-collapse m-8 border-spacing-y-1"],
+  {
+    variants: {
+      size: {
+        sm: "text-sm leading-6",
+        md: "text-base leading-8",
+        lg: "text-lg leading-10",
+      },
+      colors: {
+        primary: " text-primary-950",
+        secondary: "bg-primary-950 text-primary-50",
+      },
+      defaultVariants: {
+        size: "md",
+        colors: "primary",
+      },
     },
-    colors: {
-      primary: "bg-primary-50 text-primary-950",
-      secondary: "bg-primary-950 text-primary-50",
-    },
-    defaultVariants: {
-      size: "md",
-      colors: "primary",
-    },
-  },
-});
+  }
+);
 
 export interface ColumnProps<T> {
   key: string;
@@ -34,7 +37,7 @@ type Props<T> = {
 const Table = <T,>({ data, columns, size, colors }: Props<T>) => {
   const headers = columns.map((column, index) => {
     return (
-      <th key={`header-${index}`} className="">
+      <th key={`header-${index}`} className="text-left">
         {column.title}
       </th>
     );
@@ -43,13 +46,16 @@ const Table = <T,>({ data, columns, size, colors }: Props<T>) => {
   const rows = !data?.length ? (
     <tr>
       <td colSpan={columns.length} className="">
-        No data
+        Empty
       </td>
     </tr>
   ) : (
     data?.map((row, index) => {
       return (
-        <tr key={`row-${index}`}>
+        <tr
+          key={`row-${index}`}
+          className="border-b-2 border-primary-950/[.10] p-2"
+        >
           {columns.map((column, indexColumn) => {
             const value = column.render
               ? column.render(column, row as T)
@@ -63,9 +69,9 @@ const Table = <T,>({ data, columns, size, colors }: Props<T>) => {
   );
 
   return (
-    <table className={cn(TableStyles({ size, colors }), className)}>
+    <table className={cn(TableStyles({ size, colors }))}>
       <thead className="">
-        <tr>{headers}</tr>
+        <tr className="border-b-2 border-primary-950/[.20] p-2">{headers}</tr>
       </thead>
 
       <tbody>{rows}</tbody>

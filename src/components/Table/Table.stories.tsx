@@ -2,8 +2,22 @@ import { Meta, StoryObj } from "@storybook/react";
 import Table, { ColumnProps } from "./Table";
 
 const meta: Meta<typeof Table> = {
-  title: "Layout/Table",
+  title: "Components/Table",
   component: Table,
+  tags: ["autodocs"],
+  parameters: {
+    layout: "fullscreen",
+  },
+  argTypes: {
+    size: {
+      options: ["sm", "md", "lg"],
+      control: { type: "radio" },
+    },
+    colors: {
+      options: ["primary", "secondary"],
+      control: { type: "radio" },
+    },
+  },
 };
 
 type Data = {
@@ -46,9 +60,9 @@ const columns: Array<ColumnProps<Data>> = [
     key: "department",
     title: "Department",
 
-    render: (_, record) => {
-      return <div className="text-blue-500 font-bold">{record.department}</div>;
-    },
+    // render: (_, record) => {
+    //   return <div className="text-blue-500 font-bold">{record.department}</div>;
+    // },
   },
 ];
 
