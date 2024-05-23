@@ -1,7 +1,7 @@
 // icon:scan-face | Lucide https://lucide.dev/ | Lucide
 import * as React from "react";
 
-function FaceScan(props: React.SVGProps<SVGSVGElement>) {
+function IconFaceScan(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       fill="none"
@@ -19,4 +19,4 @@ function FaceScan(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export default FaceScan;
+export default IconFaceScan;

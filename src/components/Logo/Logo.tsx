@@ -41,7 +41,7 @@
 //   }
 // );
 
-import LogoIcon from "../icons/logo";
+import IconLogo from "../icons/logo";
 
 // type LogoProps = ComponentProps<"div"> & VariantProps<typeof LogoStyles>;
 
@@ -59,7 +59,7 @@ import LogoIcon from "../icons/logo";
 // export default Logo;
 
 const index = () => {
-  return <LogoIcon />;
+  return <IconLogo />;
 };
 
 export default index;

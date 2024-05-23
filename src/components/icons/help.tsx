@@ -1,7 +1,7 @@
 // icon:bxs-help-circle | Boxicons https://boxicons.com/ | Atisa
 import * as React from "react";
 
-function Help(props: React.SVGProps<SVGSVGElement>) {
+function IconHelp(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -15,4 +15,4 @@ function Help(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export default Help;
+export default IconHelp;

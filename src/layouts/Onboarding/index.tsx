@@ -2,12 +2,13 @@ import Box from "../../components/Box";
 import Button from "../../components/Button";
 import Gradient from "../../components/Gradient";
 import Input from "../../components/Input";
-import Logo from "../../components/Logo";
 import Row from "../../components/Row";
+import Socials from "../../components/Socials";
 import Stack from "../../components/Stack";
 import Text from "../../components/Text";
-import FaceScan from "../../components/icons/facescan";
-import Help from "../../components/icons/help";
+import IconFaceScan from "../../components/icons/facescan";
+import IconHelp from "../../components/icons/help";
+import IconLogo from "../../components/icons/logo";
 
 const Onboarding = () => {
   return (
@@ -27,7 +28,7 @@ const Onboarding = () => {
 const FormSection = () => (
   <Stack className="w-1/2 flex items-center place-content-center">
     <Box>
-      <Logo />
+      <IconLogo />
       <Box className="mb-4">
         <Text as="label" weight="semibold" className="mb-1">
           First Name
@@ -68,7 +69,7 @@ const FormSection = () => (
 const FaceScanSection = () => (
   <Stack className="w-1/2 h-fit flex items-center place-content-center">
     <Box>
-      <FaceScan />
+      <IconFaceScan />
     </Box>
     <Box className="pt-10 w-full">
       <Row className="justify-center">
@@ -78,7 +79,7 @@ const FaceScanSection = () => (
           </Button>
         </Box>
         <Box>
-          <Help />
+          <IconHelp />
         </Box>
       </Row>
     </Box>
@@ -116,6 +117,9 @@ const InfoSection = () => (
       deserunt blanditiis? Pariatur soluta, aliquid sunt, placeat officia quis
       id libero temporibus nihil earum voluptas quasi!
     </Row>
+    <Box>
+      <Socials size={"sm"} />
+    </Box>
   </Stack>
 );
 
