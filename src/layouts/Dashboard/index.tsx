@@ -44,7 +44,6 @@ export const Dashboard = ({
               data={locationData}
               size="md"
               colors="primary"
-              className="indent-2"
             />
           </Box>
 
@@ -74,13 +73,7 @@ export const Dashboard = ({
               <Input placeholder="search..." />
             </Row>
           </Row>
-          <Table
-            columns={columns}
-            data={data}
-            size="md"
-            colors="primary"
-            className="indent-2"
-          />
+          <Table columns={columns} data={data} size="md" colors="primary" />
         </Stack>
       </Stack>
     </Box>

@@ -3,7 +3,7 @@ import { ComponentProps, ReactElement } from "react";
 import { cn } from "../../utils";
 
 const TableStyles = cva(
-  [" table-auto w-full border-collapse border-spacing-y-1"],
+  ["indent-2 table-auto w-full border-collapse border-spacing-y-1"],
   {
     variants: {
       size: {

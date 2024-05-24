@@ -1,4 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
+import Text from "../Text";
 import Table, { ColumnProps } from "./Table";
 
 const meta: Meta<typeof Table> = {
@@ -70,5 +71,36 @@ export const Default: Story = {
   args: {
     data,
     columns: columns as Array<ColumnProps<unknown>>,
+  },
+};
+
+const columnsLinks: Array<ColumnProps<Data>> = [
+  {
+    key: "id",
+    title: "Id",
+  },
+  {
+    key: "name",
+    title: "Name",
+
+    //Render as a link
+    render: (_, record) => {
+      return (
+        <Text as="a" href="" className="">
+          {record.name}
+        </Text>
+      );
+    },
+  },
+  {
+    key: "department",
+    title: "Department",
+  },
+];
+
+export const Links: Story = {
+  args: {
+    data,
+    columns: columnsLinks as Array<ColumnProps<unknown>>,
   },
 };
