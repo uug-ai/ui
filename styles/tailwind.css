@@ -789,6 +789,10 @@ video {
   justify-self: end;
 }
 
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
 .text-wrap {
   text-wrap: wrap;
 }
@@ -864,6 +868,18 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-primary-950\/\[\.1\] {
+  background-color: rgb(8 47 73 / .1);
+}
+
+.bg-primary-950\/\[\.01\] {
+  background-color: rgb(8 47 73 / .01);
+}
+
+.bg-primary-950\/\[\.02\] {
+  background-color: rgb(8 47 73 / .02);
 }
 
 .bg-gradient-to-br {
@@ -961,6 +977,10 @@ video {
 
 .text-right {
   text-align: right;
+}
+
+.indent-2 {
+  text-indent: 0.5rem;
 }
 
 .text-2xl {

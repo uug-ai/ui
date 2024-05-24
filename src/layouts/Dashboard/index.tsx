@@ -35,18 +35,19 @@ export const Dashboard = ({
           </Text>
         </Row>
         <Row className="justify-between gap-4 h-60">
-          <Stack className="basis-1/2">
-            <Text as="h3" size="2xl" weight="semibold">
+          {/* <Text as="h3" size="2xl" weight="semibold">
               Locations
-            </Text>
+            </Text> */}
+          <Box className="basis-1/2 overflow-y-scroll w-full h-full border-2 rounded-lg border-box">
             <Table
               columns={locationColumns}
               data={locationData}
               size="md"
               colors="primary"
-              className="border-2 rounded-lg border-box"
+              className="indent-2"
             />
-          </Stack>
+          </Box>
+
           <Stack className="border-2 rounded-lg border-box items-end basis-1/4 place-self-end justify-end">
             <IconLocationAdd className="self-center m-8 grow" />
             <Button variant="solid" width="full" className="">
@@ -60,7 +61,7 @@ export const Dashboard = ({
             </Button>
           </Stack>
         </Row>
-        <Box className="w-full">
+        <Stack className="w-full h-full  p-8 bg-primary-950/[.02] rounded-lg gap-4">
           <Row className="justify-between gap-4">
             <Text as="h3" size="2xl" weight="semibold" className="basis-1/2">
               Users
@@ -73,8 +74,14 @@ export const Dashboard = ({
               <Input placeholder="search..." />
             </Row>
           </Row>
-          <Table columns={columns} data={data} size="md" colors="primary" />
-        </Box>
+          <Table
+            columns={columns}
+            data={data}
+            size="md"
+            colors="primary"
+            className="indent-2"
+          />
+        </Stack>
       </Stack>
     </Box>
   );

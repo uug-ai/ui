@@ -116,12 +116,28 @@ const locationData: Array<locationData> = [
     id: 4,
     name: "Location 4",
   },
+  {
+    id: 5,
+    name: "Location 5",
+  },
+  {
+    id: 6,
+    name: "Location 6",
+  },
+  {
+    id: 7,
+    name: "Location 7",
+  },
+  {
+    id: 8,
+    name: "Location 8",
+  },
 ];
 
 const locationColumns: Array<ColumnProps<locationData>> = [
   {
     key: "name",
-    title: "Name",
+    title: "Locations",
   },
 ];
 
