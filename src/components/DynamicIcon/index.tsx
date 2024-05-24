@@ -8,7 +8,7 @@ interface IconProps {
   type: string;
 }
 
-// This dynamicallyimports an icon component using the (reacts) lazy function.
+// This dynamically imports an icon component using the (reacts) lazy function.
 // Meaning it will happen asynchronously, which can improve performance by splitting the code into smaller chunks.
 
 const Icon: React.FC<IconProps> = ({ type }) => {
