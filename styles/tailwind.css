@@ -833,6 +833,10 @@ video {
   justify-self: end;
 }
 
+.justify-self-center {
+  justify-self: center;
+}
+
 .overflow-y-scroll {
   overflow-y: scroll;
 }
@@ -1163,6 +1167,15 @@ video {
 
 .text-primary-950\/\[\.9\] {
   color: rgb(8 47 73 / .9);
+}
+
+.text-red-950 {
+  --tw-text-opacity: 1;
+  color: rgb(69 10 10 / var(--tw-text-opacity));
+}
+
+.text-primary-950\/\[\.7\] {
+  color: rgb(8 47 73 / .7);
 }
 
 .underline {

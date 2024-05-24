@@ -49,37 +49,60 @@ export const Dashboard = ({
 
           <Stack className="basis-1/2 gap-4">
             <Box className="flex justify-center items-center w-full border-2 rounded-lg border-box basis-1/3">
-              <Text as="h4" size="xl" weight="semibold" className="p-2">
+              <Text
+                as="h4"
+                size="xl"
+                weight="semibold"
+                className="p-2 self-center "
+              >
                 Locations: 8
               </Text>
             </Box>
             <Box className="flex justify-center w-full border-2 rounded-lg border-box basis-1/3">
-              <Text as="h4" size="xl" weight="semibold" className="p-2">
+              <Text
+                as="h4"
+                size="xl"
+                weight="semibold"
+                className="p-2 self-center"
+              >
                 Users: 34
               </Text>
             </Box>
             <Box className="flex justify-center w-full border-2 rounded-lg border-box basis-1/3">
-              <Text as="h4" size="xl" weight="semibold" className="p-2">
+              <Text
+                as="h4"
+                size="xl"
+                weight="semibold"
+                className="p-2 self-center "
+              >
                 Information
               </Text>
             </Box>
           </Stack>
 
           <Stack className="border-2 rounded-lg border-box items-end basis-1/4 place-self-end justify-end">
-            <IconLocationAdd className="self-center m-8 grow" />
+            <IconLocationAdd
+              className="self-center m-8 grow text-primary-950/[.7]"
+              height="10em"
+              width="10em"
+            />
             <Button variant="solid" width="full" className="">
               Add location
             </Button>
           </Stack>
           <Stack className="border-2 rounded-lg border-box basis-1/4 place-self-end justify-end">
-            <IconUserAdd className="self-center m-8 grow" />
+            <IconUserAdd
+              className="self-center m-8 grow text-primary-950/[.7]"
+              height="10em"
+              width="10em"
+            />
             <Button variant="solid" width="full" className="">
               Add user
             </Button>
           </Stack>
         </Row>
         <Stack className="p-4 bg-primary-950/[.02] rounded-lg gap-4">
-          <Row className="justify-between">
+          <Row className="justify-between p-0">
             <Text as="h3" size="2xl" weight="semibold" className="basis-1/2">
               Users
             </Text>
