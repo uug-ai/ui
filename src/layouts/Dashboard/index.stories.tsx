@@ -1,6 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { Dashboard } from ".";
 import { ColumnProps } from "../../components";
+import Text from "../../components/Text";
 
 const meta: Meta<typeof Dashboard> = {
   title: "Layout/Dashboard",
@@ -88,14 +89,18 @@ const columns: Array<ColumnProps<Data>> = [
   {
     key: "name",
     title: "Name",
+
+    render: (_, record) => {
+      return (
+        <Text as="a" href="" className="">
+          {record.name}
+        </Text>
+      );
+    },
   },
   {
     key: "department",
     title: "Department",
-
-    // render: (_, record) => {
-    //   return <div className="text-blue-500 font-bold">{record.department}</div>;
-    // },
   },
 ];
 

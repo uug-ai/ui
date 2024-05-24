@@ -25,27 +25,45 @@ export const Dashboard = ({
   return (
     <Box>
       <Gradient />
-      <Stack className="gap-12 p-8">
+      <Stack className="gap-12 p-8 ">
         <Row className="justify-between">
           <Text as="h1" size="5xl" weight="semibold">
             Dashboard
           </Text>
-          <Text as="h2" size="4xl" weight="semibold">
+          <Text as="h2" size="4xl" weight="semibold" className="self-end">
             Organization
           </Text>
         </Row>
-        <Row className="justify-between gap-4 h-60">
+        <Row className="justify-between h-60">
           {/* <Text as="h3" size="2xl" weight="semibold">
               Locations
             </Text> */}
-          <Box className="basis-1/2 overflow-y-scroll w-full h-full border-2 rounded-lg border-box">
+          {/* <Box className="basis-1/2 overflow-y-scroll w-full h-full border-2 rounded-lg border-box">
             <Table
               columns={locationColumns}
               data={locationData}
               size="md"
               colors="primary"
             />
-          </Box>
+          </Box> */}
+
+          <Stack className="basis-1/2 gap-4">
+            <Box className="flex justify-center items-center w-full border-2 rounded-lg border-box basis-1/3">
+              <Text as="h4" size="xl" weight="semibold" className="p-2">
+                Locations: 8
+              </Text>
+            </Box>
+            <Box className="flex justify-center w-full border-2 rounded-lg border-box basis-1/3">
+              <Text as="h4" size="xl" weight="semibold" className="p-2">
+                Users: 34
+              </Text>
+            </Box>
+            <Box className="flex justify-center w-full border-2 rounded-lg border-box basis-1/3">
+              <Text as="h4" size="xl" weight="semibold" className="p-2">
+                Information
+              </Text>
+            </Box>
+          </Stack>
 
           <Stack className="border-2 rounded-lg border-box items-end basis-1/4 place-self-end justify-end">
             <IconLocationAdd className="self-center m-8 grow" />
@@ -60,12 +78,12 @@ export const Dashboard = ({
             </Button>
           </Stack>
         </Row>
-        <Stack className="w-full h-full  p-8 bg-primary-950/[.02] rounded-lg gap-4">
-          <Row className="justify-between gap-4">
+        <Stack className="p-4 bg-primary-950/[.02] rounded-lg gap-4">
+          <Row className="justify-between">
             <Text as="h3" size="2xl" weight="semibold" className="basis-1/2">
               Users
             </Text>
-            <Row className="basis-1/2 gap-4">
+            <Row className="basis-1/2 p-0">
               <Dropdown
                 options={[{ value: "filter", label: "Filter" }]}
                 className="border-2 rounded-[5px]"
