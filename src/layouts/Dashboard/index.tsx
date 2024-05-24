@@ -44,6 +44,7 @@ export const Dashboard = ({
               data={locationData}
               size="md"
               colors="primary"
+              className="border-2 rounded-lg border-box"
             />
           </Stack>
           <Stack className="border-2 rounded-lg border-box items-end basis-1/4 place-self-end justify-end">

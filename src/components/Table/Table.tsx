@@ -1,5 +1,5 @@
 import { VariantProps, cva } from "class-variance-authority";
-import { ReactElement } from "react";
+import { ComponentProps, ReactElement } from "react";
 import { cn } from "../../utils";
 
 const TableStyles = cva(
@@ -32,9 +32,17 @@ export interface ColumnProps<T> {
 type Props<T> = {
   columns: Array<ColumnProps<T>>;
   data?: Array<T>;
-} & VariantProps<typeof TableStyles>;
+} & ComponentProps<"table"> &
+  VariantProps<typeof TableStyles>;
 
-const Table = <T,>({ data, columns, size, colors }: Props<T>) => {
+const Table = <T,>({
+  data,
+  columns,
+  size,
+  colors,
+  className,
+  ...props
+}: Props<T>) => {
   const headers = columns.map((column, index) => {
     return (
       <th key={`header-${index}`} className="text-left">
@@ -69,7 +77,7 @@ const Table = <T,>({ data, columns, size, colors }: Props<T>) => {
   );
 
   return (
-    <table className={cn(TableStyles({ size, colors }))}>
+    <table className={cn(TableStyles({ size, colors }), className)} {...props}>
       <thead className="">
         <tr className="border-b-2 border-primary-950/[.20] p-2">{headers}</tr>
       </thead>
