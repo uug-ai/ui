@@ -30,13 +30,13 @@ export const Dashboard = ({
           <Text as="h1" size="5xl" weight="semibold">
             Dashboard
           </Text>
-          <Text as="h2" size="2xl" weight="semibold">
-            Orginization
+          <Text as="h2" size="4xl" weight="semibold">
+            Organization
           </Text>
         </Row>
-        <Row className="justify-between gap-4">
+        <Row className="justify-between gap-4 h-60">
           <Stack className="basis-1/2">
-            <Text as="h2" size="2xl" weight="semibold">
+            <Text as="h3" size="2xl" weight="semibold">
               Locations
             </Text>
             <Table
@@ -46,22 +46,22 @@ export const Dashboard = ({
               colors="primary"
             />
           </Stack>
-          <Stack className="border-2 rounded-lg border-box items-end basis-1/4">
-            <IconLocationAdd className="self-center m-8" />
-            <Button variant="solid" width="full" className="self-end">
+          <Stack className="border-2 rounded-lg border-box items-end basis-1/4 place-self-end justify-end">
+            <IconLocationAdd className="self-center m-8 grow" />
+            <Button variant="solid" width="full" className="">
               Add location
             </Button>
           </Stack>
-          <Stack className="border-2 rounded-lg border-box basis-1/4">
-            <IconUserAdd className="self-center m-8" />
-            <Button variant="solid" width="full" className="justify-end">
+          <Stack className="border-2 rounded-lg border-box basis-1/4 place-self-end justify-end">
+            <IconUserAdd className="self-center m-8 grow" />
+            <Button variant="solid" width="full" className="">
               Add user
             </Button>
           </Stack>
         </Row>
         <Box className="w-full">
           <Row className="justify-between gap-4">
-            <Text as="h2" size="2xl" weight="semibold" className="basis-1/2">
+            <Text as="h3" size="2xl" weight="semibold" className="basis-1/2">
               Users
             </Text>
             <Row className="basis-1/2 gap-4">
