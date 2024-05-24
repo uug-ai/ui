@@ -1,7 +1,7 @@
 // icon:exit | Radix Icons https://icons.radix-ui.com/ | WorkOS
 import * as React from "react";
 
-function IconLogOut(props: React.SVGProps<SVGSVGElement>) {
+function LogOut(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg fill="none" viewBox="0 0 15 15" height="1em" width="1em" {...props}>
       <path
@@ -14,4 +14,4 @@ function IconLogOut(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export default IconLogOut;
+export default LogOut;

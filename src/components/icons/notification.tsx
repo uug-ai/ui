@@ -1,7 +1,7 @@
 // icon:notification-badge-line | Remix Icon https://remixicon.com/ | Remix Design
 import * as React from "react";
 
-function IconNotification(props: React.SVGProps<SVGSVGElement>) {
+function Notification(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -16,4 +16,4 @@ function IconNotification(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export default IconNotification;
+export default Notification;

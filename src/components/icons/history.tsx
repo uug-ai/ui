@@ -1,7 +1,7 @@
 // icon:history | Lucide https://lucide.dev/ | Lucide
 import * as React from "react";
 
-function IconHistory(props: React.SVGProps<SVGSVGElement>) {
+function History(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       fill="none"
@@ -20,4 +20,4 @@ function IconHistory(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export default IconHistory;
+export default History;

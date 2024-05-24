@@ -1,5 +1,5 @@
 import { SVGProps } from "react";
-const IconLogo = (props: SVGProps<SVGSVGElement>) => (
+const Logo = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     id="Layer_2"
@@ -57,4 +57,4 @@ const IconLogo = (props: SVGProps<SVGSVGElement>) => (
     />
   </svg>
 );
-export default IconLogo;
+export default Logo;

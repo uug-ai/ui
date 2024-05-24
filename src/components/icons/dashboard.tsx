@@ -1,7 +1,7 @@
 // icon:speedometer | Material Design Icons https://materialdesignicons.com/ | Austin Andrews
 import * as React from "react";
 
-function IconDashboard(props: React.SVGProps<SVGSVGElement>) {
+function dashboard(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -15,4 +15,4 @@ function IconDashboard(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export default IconDashboard;
+export default dashboard;
