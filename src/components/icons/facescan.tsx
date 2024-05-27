@@ -1,22 +1,52 @@
-// icon:scan-face | Lucide https://lucide.dev/ | Lucide
-import * as React from "react";
-
-function facescan(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      fill="none"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      viewBox="0 0 24 24"
-      height="10em"
-      width="10em"
-      {...props}
-    >
-      <path d="M3 7V5a2 2 0 012-2h2M17 3h2a2 2 0 012 2v2M21 17v2a2 2 0 01-2 2h-2M7 21H5a2 2 0 01-2-2v-2M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01" />
-    </svg>
-  );
-}
-
-export default facescan;
+import { SVGProps } from "react";
+const FaceScan = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlSpace="preserve"
+    width={500}
+    height={500}
+    {...props}
+  >
+    <style>
+      {
+        ".st1,.st3{fill:none;stroke:#000;stroke-width:10;stroke-miterlimit:10}.st3{stroke-width:14;stroke-linecap:round;stroke-linejoin:round}"
+      }
+    </style>
+    <g id="hair">
+      <path
+        d="M275.92 190.75c5.54 6.04 45.79 46.98 112.32 38.94 1.93-.23 3.42-1.8 3.55-3.74 5.9-88.5-65.14-148.03-143.01-147.12-78.05.91-150.85 65.45-143.01 147.91a3.982 3.982 0 0 0 2.71 3.38c14.75 4.92 93.63 26.81 166.04-39.42a.993.993 0 0 1 1.4.05zM121.86 250s23 22.53 39.7 23.86M327.06 268.19s31.86-.41 47.96-22.19M215.58 276.6h59.67"
+        className="st1"
+      />
+    </g>
+    <path
+      id="head"
+      d="M123.52 234.26c29.82 6.08 92.9 10.9 151.23-42.45a.993.993 0 0 1 1.4.05c5.12 5.58 38.35 40.59 96.18 39.52 1.13 8.25 1.86 17.42 2.16 27.63.26 9.05.18 18.91-.27 29.65-.45 10.67-2.06 21-4.72 30.86-15 55.56-63.32 95.88-123.5 94.5-70.85-1.62-125.36-60.35-125.36-131.22-.01-18.78.99-34.83 2.88-48.54z"
+      className="st1"
+    />
+    <g id="ears">
+      <path
+        d="M374.6 259.21c.24 8.4.16 18.82-.25 28.8-.41 9.9-1.91 19.5-4.38 28.65 19.18 2.85 30.3-9.46 34.18-18.92 3.03-7.39 3.2-15.73-.04-23.03-3.47-7.83-13.27-16.33-29.51-15.5zM120.53 257.38c-.22 9.21-.15 20.63.24 31.56.39 10.85 1.78 21.37 4.09 31.4-17.9 3.12-28.29-10.37-31.91-20.73-2.83-8.1-2.99-17.24.03-25.24 3.24-8.58 12.39-17.9 27.55-16.99z"
+        className="st1"
+      />
+    </g>
+    <g id="scan">
+      <path
+        d="M52.46 348.21h393.35"
+        style={{
+          fill: "none",
+          stroke: "#000",
+          strokeWidth: 12.498,
+          strokeLinecap: "round",
+          strokeMiterlimit: 10,
+        }}
+      />
+      <path
+        d="M374.64 28.93h90.89v90.9M30.97 119.83v-90.9h90.89M122.24 466.36H31.35v-90.89M465.91 375.47v90.89h-90.89"
+        className="st3"
+      />
+      <circle cx={187.97} cy={286.94} r={29.47} className="st1" />
+      <circle cx={303.39} cy={285.74} r={29.47} className="st1" />
+    </g>
+  </svg>
+);
+export default FaceScan;
