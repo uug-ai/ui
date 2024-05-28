@@ -3,7 +3,13 @@ import * as React from "react";
 
 function LogOut(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <svg fill="none" viewBox="0 0 15 15" height="1em" width="1em" {...props}>
+    <svg
+      fill="none"
+      viewBox="0 0 15 15"
+      height="1.335em"
+      width="1.335em"
+      {...props}
+    >
       <path
         fill="currentColor"
         fillRule="evenodd"
