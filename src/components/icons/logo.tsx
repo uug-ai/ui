@@ -57,20 +57,20 @@ const Logo = ({ size, className, ...props }: LogoProps) => {
       />
       <circle cx={761.68} cy={56.33} r={25.59} className="cls-2" />
       <circle
-        cx={742.42}
-        cy={44.24}
-        r={13.51}
-        style={{
-          fill: "#fff",
-          strokeWidth: 0,
-        }}
-      />
-      <circle
         cx={761.6}
         cy={56.25}
         r={26}
         style={{
           fill: "#000",
+          strokeWidth: 0,
+        }}
+      />
+      <circle
+        cx={742.42}
+        cy={44.24}
+        r={13.51}
+        style={{
+          fill: "#fff",
           strokeWidth: 0,
         }}
       />
