@@ -15,7 +15,7 @@ const Onboarding = () => {
     <Box className="bg-primary-50">
       <Stack>
         <Gradient />
-        <Row className="w-full pt-14 px-20">
+        <Row className="w-full pt-14 px-20 items-center">
           <FormSection />
           <FaceScanSection />
         </Row>
@@ -67,20 +67,16 @@ const FormSection = () => (
 );
 
 const FaceScanSection = () => (
-  <Stack className="w-2/3 h-fit flex items-center place-content-center">
+  <Stack className="w-2/3 flex items-center place-content-center">
     <Box>
       <FaceScan />
     </Box>
-    <Box className="pt-10 w-full">
-      <Row>
-        <Row className="w-2/3">
-          <Button type="submit" variant="solid" width="third">
-            Scan Face
-          </Button>
-        </Row>
-        <Box className="w-1/3">
-          <Help />
-        </Box>
+    <Box className="w-1/6 relative">
+      <Row className="place-content-center pt-8">
+        <Button type="submit" variant="solid" width="third">
+          Scan Face
+        </Button>
+        <Help className="absolute -right-5 top-10" />
       </Row>
     </Box>
   </Stack>
