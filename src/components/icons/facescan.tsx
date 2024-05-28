@@ -6,8 +6,8 @@ const FaceScan = (props: SVGProps<SVGSVGElement>) => (
     xmlnsXlink="http://www.w3.org/1999/xlink"
     x="0px"
     y="0px"
-    width="15em"
-    height="15em"
+    width="18em"
+    height="18em"
     viewBox="0 0 250 250"
     xmlSpace="preserve"
     {...props}
