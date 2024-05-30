@@ -4,19 +4,33 @@ import Icon from "../DynamicIcon";
 import Row from "../Row";
 import Text from "../Text";
 
+// The props with a "?" are optional
 interface NavItemProps {
   title: string;
   type: string;
+  className?: string;
+  href?: string;
 }
 
-const NavItem: React.FC<NavItemProps> = ({ title, type }) => {
+// This will export between a non-clickable and clickable NavItem based on if the "href" prop is present
+const NavItem: React.FC<NavItemProps> = ({ title, type, className, href }) => {
+  const content = (
+    <div className="flex items-center group">
+      <Icon type={type} className="mr-2" noHoverEffect />
+      <Text className={`pl-2 pr-10 font-bold ${className}`}>{title}</Text>
+    </div>
+  );
+
   return (
-    <Box className="ml-5 pt-6">
-      <Row>
-        <Icon type={type} className={"className"} />
-        <Text className="pl-2 pr-10" weight="bold">
-          {title}
-        </Text>
+    <Box className={`ml-5 pt-6 ${className} hover:opacity-60`}>
+      <Row className="flex items-center">
+        {href ? (
+          <a href={href} className="flex items-center group-hover:opacity-100">
+            {content}
+          </a>
+        ) : (
+          <div className="group-hover:opacity-100">{content}</div>
+        )}
       </Row>
     </Box>
   );

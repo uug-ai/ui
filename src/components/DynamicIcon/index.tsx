@@ -5,10 +5,17 @@ import Blank from "../icons/blank";
 
 interface IconProps {
   type: string;
-  className: string;
+  className?: string;
+  href?: string; // Optional href prop
+  noHoverEffect?: boolean; // Optional prop to control hover effect
 }
 
-const Icon: React.FC<IconProps> = ({ type, className }) => {
+const Icon: React.FC<IconProps> = ({
+  type,
+  className,
+  href,
+  noHoverEffect,
+}) => {
   // Use a fallback icon component in case the requested icon is not found
   const FallbackIcon = Blank;
 
@@ -18,12 +25,24 @@ const Icon: React.FC<IconProps> = ({ type, className }) => {
     }))
   );
 
+  const iconElement = (
+    <Suspense fallback={<div className="loading">Loading...</div>}>
+      <LazyIcon className={`icon ${className}`} />
+    </Suspense>
+  );
+
   return (
-    <Box className="Icon">
-      <Row>
-        <Suspense fallback={<div>Loading...</div>}>
-          <LazyIcon />
-        </Suspense>
+    <Box
+      className={`Icon ${className} ${noHoverEffect ? "" : "hover:opacity-60"}`}
+    >
+      <Row className="flex items-center">
+        {href ? (
+          <a href={href} className="flex items-center">
+            {iconElement}
+          </a>
+        ) : (
+          iconElement
+        )}
       </Row>
     </Box>
   );
