@@ -5,14 +5,17 @@ import Blank from "../icons/blank";
 
 interface IconProps {
   type: string;
+  className: string;
 }
 
-const Icon: React.FC<IconProps> = ({ type }) => {
+const Icon: React.FC<IconProps> = ({ type, className }) => {
   // Use a fallback icon component in case the requested icon is not found
   const FallbackIcon = Blank;
 
   const LazyIcon = React.lazy(() =>
-    import(`../icons/${type}`).catch(() => ({ default: FallbackIcon }))
+    import(`../icons/${type}`).catch(() => ({
+      default: FallbackIcon,
+    }))
   );
 
   return (
