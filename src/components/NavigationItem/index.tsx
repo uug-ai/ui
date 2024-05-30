@@ -11,8 +11,8 @@ interface NavItemProps {
 
 const NavItem: React.FC<NavItemProps> = ({ title, type }) => {
   return (
-    <Box className="ml-5">
-      <Row className="pt-6">
+    <Box className="ml-5 pt-6">
+      <Row>
         <Icon type={type} className={"className"} />
         <Text className="pl-2 pr-10" weight="bold">
           {title}
