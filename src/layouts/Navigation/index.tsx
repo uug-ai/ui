@@ -4,7 +4,7 @@ import {
   NavigationFooter,
   NavigationHeader,
   NavigationSocials,
-} from "../../components/Navigation";
+} from "../../components/NavigationElements";
 import NavItem from "../../components/NavigationItem";
 import Row from "../../components/Row";
 
