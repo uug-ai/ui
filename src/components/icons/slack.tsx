@@ -20,7 +20,7 @@ function IconSlackCircle(props: React.SVGProps<SVGSVGElement>) {
 
 // icon:slack | Ant Design Icons https://ant.design/components/icon/ | Ant Design
 
-function IconSlack(props: React.SVGProps<SVGSVGElement>) {
+function Slack(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -54,4 +54,4 @@ function IconSlackSquare(props: React.SVGProps<SVGSVGElement>) {
 
 export { IconSlackCircle, IconSlackSquare };
 
-export default IconSlack;
+export default Slack;

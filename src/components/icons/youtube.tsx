@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function IconYoutube(props: React.SVGProps<SVGSVGElement>) {
+function Youtube(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,4 +15,4 @@ function IconYoutube(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export default IconYoutube;
+export default Youtube;
