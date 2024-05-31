@@ -3,7 +3,7 @@ import { NavigationFooter, NavigationHeader, NavigationSocials } from "./index";
 
 // Define meta configuration for Storybook
 const meta: Meta<typeof NavigationHeader> = {
-  title: "Layout/NavigationElements",
+  title: "Components/Navigation Elements",
   component: NavigationHeader,
   subcomponents: { NavigationFooter, NavigationSocials },
 };
