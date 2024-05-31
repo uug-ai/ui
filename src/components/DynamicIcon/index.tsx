@@ -1,27 +1,44 @@
-import React, { Suspense } from "react";
+import React from "react";
 import Box from "../Box";
 import Row from "../Row";
-
-// This defines the structure of props that component expects to receive
+import Blank from "../icons/blank";
 
 interface IconProps {
   type: string;
+  className?: string;
+  href?: string; // Optional href prop
+  noHoverEffect?: boolean; // Optional prop to control hover effect
 }
 
-// This dynamically imports an icon component using the (reacts) lazy function.
-// Meaning it will happen asynchronously, which can improve performance by splitting the code into smaller chunks.
+const Icon: React.FC<IconProps> = ({
+  type,
+  className,
+  href,
+  noHoverEffect,
+}) => {
+  // Use a fallback icon component in case the requested icon is not found
+  let IconComponent;
 
-const Icon: React.FC<IconProps> = ({ type }) => {
-  const IconComponent = React.lazy(() => import(`../icons/${type}`));
+  try {
+    IconComponent = require(`../icons/${type}`).default;
+  } catch (error) {
+    IconComponent = Blank;
+  }
 
-  // The suspense component is used to handle the asynchornous loading of the icon component
+  const iconElement = <IconComponent className={`icon ${className}`} />;
 
   return (
-    <Box className="Icon">
-      <Row>
-        <Suspense fallback={<div>Loading...</div>}>
-          <IconComponent />
-        </Suspense>
+    <Box
+      className={`Icon ${className} ${noHoverEffect ? "" : "hover:opacity-60"}`}
+    >
+      <Row className="flex items-center">
+        {href ? (
+          <a href={href} className="flex items-center">
+            {iconElement}
+          </a>
+        ) : (
+          iconElement
+        )}
       </Row>
     </Box>
   );
