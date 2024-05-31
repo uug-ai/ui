@@ -26,7 +26,7 @@ export const Dashboard = ({
     <Box>
       <Gradient />
       <Stack className="gap-12 p-8 ">
-        <Row className="justify-between">
+        <Row className="justify-between p-4 gap-4">
           <Text as="h1" size="5xl" weight="semibold">
             Dashboard
           </Text>
@@ -34,7 +34,7 @@ export const Dashboard = ({
             Organization
           </Text>
         </Row>
-        <Row className="justify-between h-60">
+        <Row className="justify-between h-60 p-4 gap-4">
           {/* <Text as="h3" size="2xl" weight="semibold">
               Locations
             </Text> */}
@@ -102,11 +102,11 @@ export const Dashboard = ({
           </Stack>
         </Row>
         <Stack className="p-4 bg-primary-950/[.02] rounded-lg gap-4">
-          <Row className="justify-between p-0">
+          <Row className="justify-between p-0 gap-4">
             <Text as="h3" size="2xl" weight="semibold" className="basis-1/2">
               Users
             </Text>
-            <Row className="basis-1/2 p-0">
+            <Row className="basis-1/2 p-0 gap-4">
               <Dropdown
                 options={[{ value: "filter", label: "Filter" }]}
                 className="border-2 rounded-[5px]"
