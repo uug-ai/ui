@@ -13,7 +13,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   render: (args) => (
-    <Row className="gap-4 p-4 bg-gray-50" {...args}>
+    <Row className="bg-gray-50" {...args}>
       <Box className="w-[100px] h-[100px] bg-primary-950">1</Box>
       <Box className="w-[100px] h-[100px] bg-primary-950">2</Box>
       <Box className="w-[100px] h-[100px] bg-primary-950">3</Box>

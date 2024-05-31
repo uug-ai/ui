@@ -11,7 +11,7 @@ module.exports = {
     extend: {
       colors: {
         primary: colors.sky,
-        gradient: colors.cyan,
+        gradientBlue: colors.cyan,
       },
       minWidth: {
         0: "0",
