@@ -17,13 +17,13 @@ const NavigationHeader = () => (
 // This is the navigation socials component
 const NavigationSocials = () => (
   <Box>
-    <Socials className="pl-5 pb-5 gap-2 text-xs bg-slate-100" />
+    <Socials className="pl-5 pb-4 gap-2 text-xs bg-slate-100" />
   </Box>
 );
 
 // This is the navigation footer
 const NavigationFooter = () => (
-  <Box className="bg-slate-500 pb-6 items-center self-end w-full relative">
+  <Box className="bg-slate-500 pb-5 items-center self-end w-full relative">
     <Row>
       <NavItem
         type="profile"

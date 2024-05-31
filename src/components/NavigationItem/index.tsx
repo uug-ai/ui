@@ -16,13 +16,13 @@ interface NavItemProps {
 const NavItem: React.FC<NavItemProps> = ({ title, type, className, href }) => {
   const content = (
     <div className="flex items-center group">
-      <Icon type={type} className="mr-2" noHoverEffect />
-      <Text className={`pl-2 pr-10 font-bold ${className}`}>{title}</Text>
+      <Icon type={type} noHoverEffect />
+      <Text className={`ml-2 pr-10 font-bold ${className}`}>{title}</Text>
     </div>
   );
 
   return (
-    <Box className={`ml-5 pt-6 ${className} hover:opacity-60`}>
+    <Box className={`ml-5 pt-5 ${className} hover:opacity-60`}>
       <Row className="flex items-center">
         {href ? (
           <a href={href} className="flex items-center group-hover:opacity-100">

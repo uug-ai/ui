@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React from "react";
 import Box from "../Box";
 import Row from "../Row";
 import Blank from "../icons/blank";
@@ -17,19 +17,15 @@ const Icon: React.FC<IconProps> = ({
   noHoverEffect,
 }) => {
   // Use a fallback icon component in case the requested icon is not found
-  const FallbackIcon = Blank;
+  let IconComponent;
 
-  const LazyIcon = React.lazy(() =>
-    import(`../icons/${type}`).catch(() => ({
-      default: FallbackIcon,
-    }))
-  );
+  try {
+    IconComponent = require(`../icons/${type}`).default;
+  } catch (error) {
+    IconComponent = Blank;
+  }
 
-  const iconElement = (
-    <Suspense fallback={<div className="loading">Loading...</div>}>
-      <LazyIcon className={`icon ${className}`} />
-    </Suspense>
-  );
+  const iconElement = <IconComponent className={`icon ${className}`} />;
 
   return (
     <Box
