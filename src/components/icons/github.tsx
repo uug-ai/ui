@@ -1,7 +1,7 @@
 // icon:github | Ant Design Icons https://ant.design/components/icon/ | Ant Design
 import * as React from "react";
 
-function IconGithub(props: React.SVGProps<SVGSVGElement>) {
+function Github(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -35,4 +35,4 @@ function IconGithubSquare(props: React.SVGProps<SVGSVGElement>) {
 //Add an export for the IconGithub function
 export { IconGithubSquare };
 
-export default IconGithub;
+export default Github;

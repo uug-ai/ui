@@ -1,7 +1,7 @@
 // icon:linkedin | Bootstrap https://icons.getbootstrap.com/ | Bootstrap
 import * as React from "react";
 
-function IconLinkedinSquare(props: React.SVGProps<SVGSVGElement>) {
+function Linkedin(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       fill="currentColor"
@@ -49,4 +49,4 @@ function IconLinkedinCircle(props: React.SVGProps<SVGSVGElement>) {
 
 export { IconLinkedin, IconLinkedinCircle };
 
-export default IconLinkedinSquare;
+export default Linkedin;
