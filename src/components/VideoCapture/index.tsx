@@ -1,50 +1,52 @@
-import React, { useCallback, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import Webcam from "react-webcam";
 
-const VideoCapture: React.FC = () => {
+interface VideoCaptureProps {
+  isRecording: boolean;
+  onRecordingComplete: (recordedChunks: Blob[]) => void;
+}
+
+const VideoCapture: React.FC<VideoCaptureProps> = ({
+  isRecording,
+  onRecordingComplete,
+}) => {
   const webcamRef = useRef<Webcam>(null);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
-  const [capturing, setCapturing] = useState<boolean>(false);
   const [recordedChunks, setRecordedChunks] = useState<Blob[]>([]);
 
   const handleDataAvailable = useCallback(({ data }: BlobEvent) => {
     if (data.size > 0) {
-      setRecordedChunks((prev) => prev.concat(data));
+      setRecordedChunks((prev: Blob[]) => prev.concat(data));
     }
   }, []);
 
-  const handleStartCaptureClick = useCallback(() => {
-    setCapturing(true);
-    if (webcamRef.current && webcamRef.current.stream) {
-      mediaRecorderRef.current = new MediaRecorder(webcamRef.current.stream, {
-        mimeType: "video/webm",
-      });
-      mediaRecorderRef.current.addEventListener(
-        "dataavailable",
-        handleDataAvailable
-      );
-      mediaRecorderRef.current.start();
+  useEffect(() => {
+    if (isRecording) {
+      if (webcamRef.current && webcamRef.current.stream) {
+        mediaRecorderRef.current = new MediaRecorder(webcamRef.current.stream, {
+          mimeType: "video/webm",
+        });
+        mediaRecorderRef.current.addEventListener(
+          "dataavailable",
+          handleDataAvailable
+        );
+        mediaRecorderRef.current.start();
+      }
+    } else {
+      if (mediaRecorderRef.current) {
+        mediaRecorderRef.current.stop();
+      }
     }
-  }, [handleDataAvailable]);
+  }, [isRecording, handleDataAvailable]);
 
-  const handleStopCaptureClick = useCallback(() => {
-    if (mediaRecorderRef.current) {
-      mediaRecorderRef.current.stop();
-      setCapturing(false);
-      console.log(recordedChunks);
+  useEffect(() => {
+    if (!isRecording && recordedChunks.length > 0) {
+      onRecordingComplete(recordedChunks);
+      setRecordedChunks([]); // Clear chunks after handling
     }
-  }, [recordedChunks]);
+  }, [isRecording, recordedChunks, onRecordingComplete]);
 
-  return (
-    <div>
-      <Webcam audio={true} ref={webcamRef} />
-      {capturing ? (
-        <button onClick={handleStopCaptureClick}>Stop Capture</button>
-      ) : (
-        <button onClick={handleStartCaptureClick}>Start Capture</button>
-      )}
-    </div>
-  );
+  return <Webcam audio={true} ref={webcamRef} />;
 };
 
 export default VideoCapture;
