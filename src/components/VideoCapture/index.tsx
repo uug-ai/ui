@@ -16,6 +16,7 @@ const VideoCapture: React.FC<VideoCaptureProps> = ({
 
   const handleDataAvailable = useCallback(({ data }: BlobEvent) => {
     if (data.size > 0) {
+      console.log("Data available:", data);
       setRecordedChunks((prev: Blob[]) => prev.concat(data));
     }
   }, []);
@@ -31,16 +32,19 @@ const VideoCapture: React.FC<VideoCaptureProps> = ({
           handleDataAvailable
         );
         mediaRecorderRef.current.start();
+        console.log("MediaRecorder started");
       }
     } else {
       if (mediaRecorderRef.current) {
         mediaRecorderRef.current.stop();
+        console.log("MediaRecorder stopped");
       }
     }
   }, [isRecording, handleDataAvailable]);
 
   useEffect(() => {
     if (!isRecording && recordedChunks.length > 0) {
+      console.log("Recording complete, calling onRecordingComplete");
       onRecordingComplete(recordedChunks);
       setRecordedChunks([]); // Clear chunks after handling
     }
