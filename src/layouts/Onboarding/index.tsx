@@ -1,3 +1,4 @@
+import React, { useCallback, useState } from "react";
 import Box from "../../components/Box";
 import Button from "../../components/Button";
 import Gradient from "../../components/Gradient";
@@ -6,6 +7,7 @@ import Row from "../../components/Row";
 import Socials from "../../components/Socials";
 import Stack from "../../components/Stack";
 import Text from "../../components/Text";
+import VideoCapture from "../../components/VideoCapture";
 import FaceScan from "../../components/icons/facescan";
 import Help from "../../components/icons/help";
 import Logo from "../../components/icons/logo";
@@ -66,21 +68,45 @@ const FormSection = () => (
   </Stack>
 );
 
-const FaceScanSection = () => (
-  <Stack className="w-2/3 flex items-center place-content-center">
-    <Box>
-      <FaceScan />
-    </Box>
-    <Box className="w-1/6 relative">
-      <Row className="place-content-center pt-8">
-        <Button type="submit" variant="solid" width="third">
-          Scan Face
-        </Button>
-        <Help className="absolute -right-5 top-10" />
-      </Row>
-    </Box>
-  </Stack>
-);
+const FaceScanSection: React.FC = () => {
+  const [isRecording, setIsRecording] = useState<boolean>(false);
+  const [recordedBlobs, setRecordedBlobs] = useState<Blob[]>([]);
+
+  const handleButtonClick = useCallback(() => {
+    setIsRecording((prev) => !prev);
+  }, []);
+
+  const handleRecordingComplete = (blobs: Blob[]) => {
+    setRecordedBlobs(blobs);
+    console.log("Recorded Blobs:", blobs);
+  };
+
+  return (
+    <Stack className="w-2/3 items-center pt-28">
+      <Box className="relative">
+        {isRecording ? (
+          <VideoCapture
+            isRecording={isRecording}
+            onRecordingComplete={handleRecordingComplete}
+          />
+        ) : (
+          <FaceScan className="pb-8" />
+        )}
+        <Row className="space-x-8">
+          <Button
+            size="lg"
+            variant="solid"
+            width="third"
+            onClick={handleButtonClick}
+          >
+            {isRecording ? "Stop Recording" : "Start Recording"}
+          </Button>
+          <Help className="absolute -right-5 top-10" />
+        </Row>
+      </Box>
+    </Stack>
+  );
+};
 
 const InfoSection = () => (
   <Stack className="p-14 items-center place-content-center">
