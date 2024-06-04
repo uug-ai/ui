@@ -1,6 +1,7 @@
-import React, { useCallback, useState } from "react";
+import { useState } from "react";
 import Box from "../../components/Box";
 import Button from "../../components/Button";
+import Icon from "../../components/DynamicIcon";
 import Gradient from "../../components/Gradient";
 import Input from "../../components/Input";
 import Row from "../../components/Row";
@@ -8,8 +9,6 @@ import Socials from "../../components/Socials";
 import Stack from "../../components/Stack";
 import Text from "../../components/Text";
 import VideoCapture from "../../components/VideoCapture";
-import FaceScan from "../../components/icons/facescan";
-import Help from "../../components/icons/help";
 import Logo from "../../components/icons/logo";
 
 const Onboarding = () => {
@@ -68,41 +67,39 @@ const FormSection = () => (
   </Stack>
 );
 
-const FaceScanSection: React.FC = () => {
-  const [isRecording, setIsRecording] = useState<boolean>(false);
-  const [recordedBlobs, setRecordedBlobs] = useState<Blob[]>([]);
+const FaceScanSection = () => {
+  const [isRecording, setIsRecording] = useState(false);
 
-  const handleButtonClick = useCallback(() => {
-    setIsRecording((prev) => !prev);
-  }, []);
-
-  const handleRecordingComplete = (blobs: Blob[]) => {
-    setRecordedBlobs(blobs);
-    console.log("Recorded Blobs:", blobs);
+  const handleRecordingComplete = (recordedChunks: Blob[]) => {
+    const videoBlob = new Blob(recordedChunks, { type: "video/webm" });
+    console.log("Final video blob:", videoBlob);
   };
 
   return (
-    <Stack className="w-2/3 items-center pt-28">
-      <Box className="relative">
+    <Stack className="w-2/3 flex items-center place-content-center">
+      {isRecording}
+      <Box className="w-96">
+        <VideoCapture
+          isRecording={isRecording}
+          onRecordingComplete={handleRecordingComplete}
+        />
+      </Box>
+      <Box className="w-1/5 relative">
         {isRecording ? (
-          <VideoCapture
-            isRecording={isRecording}
-            onRecordingComplete={handleRecordingComplete}
-          />
+          <Row className="place-content-center pt-8">
+            <Button variant={"solid"} onClick={() => setIsRecording(false)}>
+              Stop Recording
+            </Button>
+            <Icon type="help" className="absolute -right-5 top-5" />
+          </Row>
         ) : (
-          <FaceScan className="pb-8" />
+          <Row className="place-content-center pt-8">
+            <Button variant={"solid"} onClick={() => setIsRecording(true)}>
+              Start Recording
+            </Button>
+            <Icon type="help" className="absolute -right-5 top-5" />
+          </Row>
         )}
-        <Row className="space-x-8">
-          <Button
-            size="lg"
-            variant="solid"
-            width="third"
-            onClick={handleButtonClick}
-          >
-            {isRecording ? "Stop Recording" : "Start Recording"}
-          </Button>
-          <Help className="absolute -right-5 top-10" />
-        </Row>
       </Box>
     </Stack>
   );
