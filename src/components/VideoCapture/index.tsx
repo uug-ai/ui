@@ -50,7 +50,7 @@ const VideoCapture: React.FC<VideoCaptureProps> = ({
     }
   }, [isRecording, recordedChunks, onRecordingComplete]);
 
-  return <Webcam audio={true} ref={webcamRef} />;
+  return <Webcam ref={webcamRef} />;
 };
 
 export default VideoCapture;
