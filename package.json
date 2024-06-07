@@ -1,6 +1,6 @@
 {
   "name": "@uug-ai/ui",
-  "version": "1.0.33",
+  "version": "1.0.34",
   "description": "Storybook design system for UUG.AI",
   "repository": "https://github.com/uug-ai/ui.git",
   "main": "lib/index.js",
@@ -32,7 +32,8 @@
     "class-variance-authority": "^0.7.0",
     "react": "^18",
     "react-dom": "^18",
-    "ts-node": "^10.9.2"
+    "ts-node": "^10.9.2",
+    "react-webcam": "^7.2.0"
   },
   "dependencies": {
     "@storybook/addon-essentials": "^8.0.9",
