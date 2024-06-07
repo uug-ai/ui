@@ -32,8 +32,8 @@
     "class-variance-authority": "^0.7.0",
     "react": "^18",
     "react-dom": "^18",
-    "ts-node": "^10.9.2",
-    "react-webcam": "^7.2.0"
+    "react-webcam": "^7.2.0",
+    "ts-node": "^10.9.2"
   },
   "dependencies": {
     "@storybook/addon-essentials": "^8.0.9",
