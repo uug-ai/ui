@@ -13,3 +13,4 @@ export * from "./Stack/Stack";
 export * from "./Table/Table";
 export * from "./Text/Text";
 export * from "./VideoCapture";
+export * from "./icons";
