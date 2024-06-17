@@ -18,6 +18,12 @@ const Password = forwardRef<HTMLInputElement, PasswordProps>(
     // Toggle password visibility
     const toggleVisibility = () => setVisible(!visible);
 
+    const handleKeyPress = (event: React.KeyboardEvent<HTMLButtonElement>) => {
+      if (event.key === "Enter") {
+        event.preventDefault();
+      }
+    };
+
     return (
       <div className="relative w-full">
         <input
@@ -29,6 +35,7 @@ const Password = forwardRef<HTMLInputElement, PasswordProps>(
         <button
           className="absolute right-2 top-2 z-10"
           onClick={toggleVisibility}
+          onKeyDown={handleKeyPress}
           aria-label="Toggle password visibility"
         >
           {visible ? (
