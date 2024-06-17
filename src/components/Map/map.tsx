@@ -1,7 +1,7 @@
 import { Map, Marker } from "pigeon-maps";
 import Box from "../Box";
 
-const MyMap = () => {
+const Maps = () => {
   return (
     <Box>
       <Map height={300} defaultCenter={[50.879, 4.6997]} defaultZoom={11}>
@@ -11,4 +11,4 @@ const MyMap = () => {
   );
 };
 
-export default MyMap;
+export default Maps;

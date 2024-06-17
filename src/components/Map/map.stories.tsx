@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from "@storybook/react";
-import MyMap from "./map";
+import Maps from "./map";
 
-const meta: Meta<typeof MyMap> = {
+const meta: Meta<typeof Maps> = {
   title: "Components/Map",
-  component: MyMap,
+  component: Maps,
   parameters: {
     layout: "fullscreen",
   },
@@ -11,7 +11,7 @@ const meta: Meta<typeof MyMap> = {
 
 export default meta;
 
-type Story = StoryObj<typeof MyMap>;
+type Story = StoryObj<typeof Maps>;
 
 export const Default: Story = {
   args: {
