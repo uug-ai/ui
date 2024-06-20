@@ -1,27 +1,30 @@
+// Logo.stories.tsx
 import { Meta, StoryObj } from "@storybook/react";
-import Logo from "./Logo";
+import Logo from "../icons/logo";
 
 const meta: Meta<typeof Logo> = {
   title: "Components/Logo",
   component: Logo,
   tags: ["autodocs"],
+  argTypes: {
+    size: {
+      options: ["sm", "md", "lg"],
+      control: { type: "radio" },
+    },
+    color: {
+      options: ["black", "white"],
+      control: { type: "radio" },
+    },
+  },
 };
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-// Children = button label
-export const Default: Story = {};
-
-// export const White: Story = {
-//   args: {
-//     variant: "white",
-//   },
-// };
-
-// export const Black: Story = {
-//   args: {
-//     variant: "black",
-//   },
-// };
+export const Default: Story = {
+  args: {
+    size: "md",
+    color: "black",
+  },
+};
