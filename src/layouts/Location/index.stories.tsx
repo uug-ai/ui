@@ -50,6 +50,34 @@ const locationData: Array<locationData> = [
     id: 8,
     name: "Location 8",
   },
+  {
+    id: 9,
+    name: "Location 9",
+  },
+  {
+    id: 10,
+    name: "Location 10",
+  },
+  {
+    id: 11,
+    name: "Location 11",
+  },
+  {
+    id: 12,
+    name: "Location 12",
+  },
+  {
+    id: 13,
+    name: "Location 13",
+  },
+  {
+    id: 14,
+    name: "Location 14",
+  },
+  {
+    id: 15,
+    name: "Location 15",
+  },
 ];
 
 const locationColumns: Array<ColumnProps<locationData>> = [
