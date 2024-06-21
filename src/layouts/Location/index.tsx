@@ -3,6 +3,8 @@ import Button from "../../components/Button";
 import Dropdown from "../../components/Dropdown";
 import Gradient from "../../components/Gradient";
 import Input from "../../components/Input";
+import KPI from "../../components/KPI/KPI";
+import { Maps } from "../../components/Map/map";
 import Row from "../../components/Row";
 import Stack from "../../components/Stack";
 import Table from "../../components/Table";
@@ -23,12 +25,12 @@ export const Location = ({
   return (
     <Box className="h-screen w-screen">
       <Gradient />
-      <Box className="mx-7 my-4">
-        <Row className="place-content-between">
-          <Text size="4xl" className="mb-5">
-            Locations
+      <Box className="mx-9 mt-5">
+        <Row className="place-content-between mb-10">
+          <Text size="4xl" weight={"semibold"} className="mb-5">
+            LOCATIONS
           </Text>
-          <Text size="2xl" className="mb-5">
+          <Text size="2xl" weight={"semibold"} className="mb-5">
             Organisation name
           </Text>
         </Row>
@@ -53,28 +55,29 @@ export const Location = ({
           </Stack>
           <Stack className="w-1/2 gap-5">
             <Row className="gap-x-5">
-              <Stack className="bg-slate-400 w-full place-self-end h-20">
-                {/* replace with KPI component when available */}
-                <Text className="text-center">People</Text>
-                <Text className="text-center">27 / 31</Text>
-                {/* KPI */}
-              </Stack>
-              <Stack>
+              <KPI
+                firstValue={27}
+                secondValue={31}
+                label="People"
+                className="w-1/2 place-self-end h-1/6"
+              />
+              <Stack className="w-1/2">
                 <IconLocationAdd
                   className="self-center m-8 text-primary-950/[.7]"
                   height="6em"
                   width="6em"
                 />
-                <Button variant="solid" width="full" className="">
+                <Button variant="solid" width="full">
                   Add location
                 </Button>
               </Stack>
             </Row>
-            {/* Replace with map component when available */}
-            <Stack className="bg-slate-400 w-full h-96 text-center ">
-              <Text>Map</Text>
-              {/* Map */}
-            </Stack>
+            <Maps
+              height={400}
+              defaultCenter={[50.879, 4.6997]}
+              defaultZoom={11}
+              markerLocation={[50.879, 4.6997]}
+            />
           </Stack>
         </Row>
       </Box>
