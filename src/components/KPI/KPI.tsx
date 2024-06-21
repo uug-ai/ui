@@ -7,13 +7,19 @@ interface KPIProps {
   firstValue: number;
   secondValue: number;
   label: string;
+  className?: string; // Optional className prop
 }
 
-const KPI: React.FC<KPIProps> = ({ firstValue, secondValue, label }) => {
+const KPI: React.FC<KPIProps> = ({
+  firstValue,
+  secondValue,
+  label,
+  className,
+}) => {
   // const thirdValue = secondValue / firstValue;
 
   return (
-    <Box className="p-4 border rounded shadow-md">
+    <Box className={`p-4 border rounded shadow-md ${className}`}>
       <Stack>
         <Text className="text-lg font-semibold mb-2">{label}</Text>
         <Box className="mt-2 text-sm text-gray-600 text-center">
