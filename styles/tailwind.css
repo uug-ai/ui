@@ -578,20 +578,12 @@ video {
   right: 0.5rem;
 }
 
-.top-10 {
-  top: 2.5rem;
-}
-
 .top-2 {
   top: 0.5rem;
 }
 
 .top-3 {
   top: 0.75rem;
-}
-
-.top-6 {
-  top: 1.5rem;
 }
 
 .top-5 {
@@ -686,6 +678,10 @@ video {
   width: 33.333333%;
 }
 
+.w-1\/5 {
+  width: 20%;
+}
+
 .w-2 {
   width: 0.5rem;
 }
@@ -714,40 +710,16 @@ video {
   width: 2rem;
 }
 
+.w-96 {
+  width: 24rem;
+}
+
 .w-\[100px\] {
   width: 100px;
 }
 
 .w-full {
   width: 100%;
-}
-
-.w-10 {
-  width: 2.5rem;
-}
-
-.w-20 {
-  width: 5rem;
-}
-
-.w-72 {
-  width: 18rem;
-}
-
-.w-80 {
-  width: 20rem;
-}
-
-.w-1\/6 {
-  width: 16.666667%;
-}
-
-.w-96 {
-  width: 24rem;
-}
-
-.w-1\/5 {
-  width: 20%;
 }
 
 .min-w-1\/3 {
@@ -858,12 +830,6 @@ video {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
-.space-x-8 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(2rem * var(--tw-space-x-reverse));
-  margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .place-self-end {
@@ -1108,10 +1074,6 @@ video {
 
 .pt-16 {
   padding-top: 4rem;
-}
-
-.pt-28 {
-  padding-top: 7rem;
 }
 
 .pt-5 {
