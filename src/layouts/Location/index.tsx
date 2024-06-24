@@ -14,8 +14,6 @@ import IconLocationAdd from "../../components/icons/addLocation";
 export const Location = ({
   locationColumns,
   locationData,
-  data,
-  columns,
 }: {
   locationColumns: any;
   locationData: any;
@@ -49,8 +47,8 @@ export const Location = ({
             <Table
               columns={locationColumns}
               data={locationData}
-              size="md"
-              colors="primary"
+              size="lg"
+              colors="secondary"
             />
           </Stack>
           <Stack className="w-1/2 gap-5">
@@ -61,9 +59,9 @@ export const Location = ({
                 label="People"
                 className="w-1/2 place-self-end h-1/6"
               />
-              <Stack className="w-1/2">
+              <Stack className="w-1/2 border">
                 <IconLocationAdd
-                  className="self-center m-8 text-primary-950/[.7]"
+                  className="self-center m-8  text-primary-950/[.7]"
                   height="6em"
                   width="6em"
                 />
@@ -73,7 +71,7 @@ export const Location = ({
               </Stack>
             </Row>
             <Maps
-              height={400}
+              height={525}
               defaultCenter={[50.879, 4.6997]}
               defaultZoom={11}
               markerLocation={[50.879, 4.6997]}
