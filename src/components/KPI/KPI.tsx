@@ -19,10 +19,10 @@ const KPI: React.FC<KPIProps> = ({
   // const thirdValue = secondValue / firstValue;
 
   return (
-    <Box className={`p-4 border rounded shadow-md ${className}`}>
-      <Stack>
-        <Text className="text-lg font-semibold mb-2">{label}</Text>
-        <Box className="mt-2 text-sm text-gray-600 text-center">
+    <Box className={`p-4 border rounded shadow-md text-center ${className}`}>
+      <Stack className="items-center">
+        <Text className="text-2xl font-semibold mb-2">{label}</Text>
+        <Box className="mt-2 text-3xl font-semibold text-gray-600">
           {firstValue} / {secondValue}
         </Box>
         {/* <Text>{thirdValue}</Text> */}
