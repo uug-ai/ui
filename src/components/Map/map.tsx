@@ -24,3 +24,5 @@ export const Maps = ({
     </Box>
   );
 };
+
+export default Maps;

@@ -82,3 +82,5 @@ export const Location = ({
     </Box>
   );
 };
+
+export default Location;
