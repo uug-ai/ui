@@ -29,3 +29,5 @@ export const Maps: React.FC<MapProps> = ({
     </Box>
   );
 };
+
+export default Maps;
