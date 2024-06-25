@@ -1,15 +1,14 @@
-import { Marker, Map as PigeonMap } from "pigeon-maps";
-import React from "react";
-import Box from "../Box";
-interface MapProps {
-  height: number;
-  width: number;
+import { Map, Marker } from "pigeon-maps";
+
+interface MapsProps {
+  height: string;
+  width: string;
   defaultCenter: [number, number];
   defaultZoom: number;
   markerLocation: [number, number];
 }
 
-export const Maps: React.FC<MapProps> = ({
+const Maps: React.FC<MapsProps> = ({
   height,
   width,
   defaultCenter,
@@ -17,15 +16,12 @@ export const Maps: React.FC<MapProps> = ({
   markerLocation,
 }) => {
   return (
-    <Box style={{ height: `${height}px`, width: `${width}px` }}>
-      <PigeonMap
-        height={height}
-        width={width}
-        defaultCenter={defaultCenter}
-        defaultZoom={defaultZoom}
-      >
+    <div style={{ height, width }}>
+      <Map defaultCenter={defaultCenter} defaultZoom={defaultZoom}>
         <Marker width={50} anchor={markerLocation} />
-      </PigeonMap>
-    </Box>
+      </Map>
+    </div>
   );
 };
+
+export default Maps;
