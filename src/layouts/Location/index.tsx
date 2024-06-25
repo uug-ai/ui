@@ -4,7 +4,7 @@ import Dropdown from "../../components/Dropdown";
 import Gradient from "../../components/Gradient";
 import Input from "../../components/Input";
 import KPI from "../../components/KPI/KPI";
-import { Maps } from "../../components/Map/map";
+import Maps from "../../components/Map/map";
 import Row from "../../components/Row";
 import Stack from "../../components/Stack";
 import Table from "../../components/Table";
@@ -23,7 +23,7 @@ export const Location = ({
   return (
     <Box className="h-screen w-screen">
       <Gradient />
-      <Box className="mx-9 mt-5">
+      <Box className="mx-9 mt-5 m">
         <Row className="place-content-between mb-10">
           <Text size="4xl" weight={"semibold"} className="mb-5">
             LOCATIONS
@@ -32,7 +32,7 @@ export const Location = ({
             Organisation name
           </Text>
         </Row>
-        <Row className="gap-8">
+        <Row className="gap-8 h-full">
           <Stack className="w-1/2 gap-y-4">
             <Row className="h-7 gap-3">
               <Dropdown
@@ -71,7 +71,8 @@ export const Location = ({
               </Stack>
             </Row>
             <Maps
-              height={525}
+              height="480px"
+              width="100%"
               defaultCenter={[50.879, 4.6997]}
               defaultZoom={11}
               markerLocation={[50.879, 4.6997]}

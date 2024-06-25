@@ -1,27 +1,26 @@
 import { Map, Marker } from "pigeon-maps";
-import Box from "../Box";
 
-export const Maps = ({
-  height,
-  defaultCenter,
-  defaultZoom,
-  markerLocation,
-}: {
-  height: number;
+interface MapsProps {
+  height: string;
+  width: string;
   defaultCenter: [number, number];
   defaultZoom: number;
   markerLocation: [number, number];
+}
+
+const Maps: React.FC<MapsProps> = ({
+  height,
+  width,
+  defaultCenter,
+  defaultZoom,
+  markerLocation,
 }) => {
   return (
-    <Box className="w-full">
-      <Map
-        height={height}
-        defaultCenter={defaultCenter}
-        defaultZoom={defaultZoom}
-      >
+    <div style={{ height, width }}>
+      <Map defaultCenter={defaultCenter} defaultZoom={defaultZoom}>
         <Marker width={50} anchor={markerLocation} />
       </Map>
-    </Box>
+    </div>
   );
 };
 

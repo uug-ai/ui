@@ -74,10 +74,6 @@ const locationData: Array<locationData> = [
     id: 14,
     name: "Location 14",
   },
-  {
-    id: 15,
-    name: "Location 15",
-  },
 ];
 
 const locationColumns: Array<ColumnProps<locationData>> = [
