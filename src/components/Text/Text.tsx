@@ -17,6 +17,8 @@ const TextStyles = cva(
         primary: "text-primary-950/[.9]",
         secondary: "text-primary-50/[.9]",
         light: "text-primary-950/[.5]",
+        error: "text-red-700",
+        success: "text-green-700",
       },
       size: {
         sm: "text-sm",

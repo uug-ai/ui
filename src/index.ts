@@ -2,10 +2,21 @@ import Box from "./components/Box";
 import Button from "./components/Button";
 import Checkbox from "./components/Checkbox";
 import Dropdown from "./components/Dropdown";
-import Icon from "./components/DynamicIcon";
+import {
+  default as DynamicIcon,
+  default as Icon,
+} from "./components/DynamicIcon";
 import Gradient from "./components/Gradient";
 import Input from "./components/Input";
+import KPI from "./components/KPI";
 import Logo from "./components/Logo";
+import Maps from "./components/Map/map";
+import {
+  NavigationFooter,
+  NavigationHeader,
+  NavigationSocials,
+} from "./components/NavigationElements";
+import NavItem from "./components/NavigationItem";
 import Password from "./components/Password";
 import Row from "./components/Row";
 import Socials from "./components/Socials";
@@ -19,10 +30,17 @@ export {
   Button,
   Checkbox,
   Dropdown,
+  DynamicIcon,
   Gradient,
   Icon,
   Input,
+  KPI,
   Logo,
+  Maps,
+  NavItem,
+  NavigationFooter,
+  NavigationHeader,
+  NavigationSocials,
   Password,
   Row,
   Socials,
