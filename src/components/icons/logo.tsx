@@ -5,8 +5,8 @@ import { cn } from "../../utils"; // Ensure cn utility function handles class co
 const logoVariants = cva("", {
   variants: {
     size: {
-      sm: "w-6 h-6",
-      md: "w-10 h-10",
+      sm: "w-8 h-8",
+      md: "w-14 h-14",
       lg: "w-24 h-24",
     },
     color: {
