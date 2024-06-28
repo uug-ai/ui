@@ -2,10 +2,7 @@ import { default as Box } from "./components/Box/Box";
 import { default as Button } from "./components/Button";
 import { default as Checkbox } from "./components/Checkbox/Checkbox";
 import { default as Dropdown } from "./components/Dropdown";
-import {
-  default as DynamicIcon,
-  default as Icon,
-} from "./components/DynamicIcon";
+import { default as Icon } from "./components/DynamicIcon";
 import { default as Gradient } from "./components/Gradient/Gradient";
 import { default as Input } from "./components/Input/Input";
 import { default as KPI } from "./components/KPI";
@@ -49,7 +46,6 @@ export {
   Checkbox,
   Dashboard,
   Dropdown,
-  DynamicIcon,
   FaceScan,
   Github,
   Gradient,
