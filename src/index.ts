@@ -9,7 +9,6 @@ import {
 import { default as Gradient } from "./components/Gradient/Gradient";
 import { default as Input } from "./components/Input/Input";
 import { default as KPI } from "./components/KPI";
-import { default as Logo } from "./components/Logo";
 import { default as Maps } from "./components/Map/map";
 import {
   NavigationFooter,
@@ -35,6 +34,7 @@ import { default as Help } from "./components/icons/help";
 import { default as History } from "./components/icons/history";
 import { default as Insights } from "./components/icons/insights";
 import { default as Linkedin } from "./components/icons/linkedin";
+import { default as Logo } from "./components/icons/logo";
 import { default as LogOut } from "./components/icons/logout";
 import { default as Notification } from "./components/icons/notification";
 import { default as Profile } from "./components/icons/profile";
