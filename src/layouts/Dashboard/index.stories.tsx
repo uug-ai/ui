@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { Dashboard } from ".";
-import { ColumnProps } from "../../components";
+import { ColumnProps } from "../../components/Table/Table";
 import Text from "../../components/Text";
 
 const meta: Meta<typeof Dashboard> = {
