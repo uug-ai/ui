@@ -17,6 +17,7 @@
     "rollup": "rollup",
     "build": "rollup --config",
     "build-local": "rollup --config && cp -r lib ../facial-access-control/ui/node_modules/@uug-ai/ui",
+    "build-local-windows": "rollup --config && xcopy /E /I /Y lib \"../facial-access-control/ui/node_modules/@uug-ai/ui\"",
     "watch": "rollup -c -w",
     "tailwind": "npx tailwindcss -i ./src/index.css -o ./styles/tailwind.css --watch"
   },

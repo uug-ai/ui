@@ -1,1 +1,17 @@
-export * from ".";
+export { default as addLocation } from "./addLocation";
+export { default as addUser } from "./addUser";
+export { default as blank } from "./blank";
+export { default as cameraswap } from "./cameraswap";
+export { default as dashboard } from "./dashboard";
+export { default as facescan } from "./facescan";
+export { default as github } from "./github";
+export { default as help } from "./help";
+export { default as history } from "./history";
+export { default as insights } from "./insights";
+export { default as linkedin } from "./linkedin";
+export { default as logo } from "./logo";
+export { default as logout } from "./logout";
+export { default as notification } from "./notification";
+export { default as profile } from "./profile";
+export { default as slack } from "./slack";
+export { default as youtube } from "./youtube";

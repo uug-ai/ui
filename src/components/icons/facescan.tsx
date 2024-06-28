@@ -1,5 +1,10 @@
 import { SVGProps } from "react";
-const FaceScan = (props: SVGProps<SVGSVGElement>) => (
+
+interface FaceScanProps extends SVGProps<SVGSVGElement> {
+  color?: string;
+}
+
+const FaceScan = ({ color = "#FFFFFF", ...props }: FaceScanProps) => (
   <svg
     id="Layer_1"
     xmlns="http://www.w3.org/2000/svg"
@@ -13,9 +18,12 @@ const FaceScan = (props: SVGProps<SVGSVGElement>) => (
     {...props}
   >
     <style type="text/css">
-      {
-        "\n\t.st0{opacity:0.502;}\n\t.st1{fill:none;stroke:#666666;stroke-width:5.3207;stroke-miterlimit:10;}\n\t.st2{fill:none;stroke:#666666;stroke-width:6.6498;stroke-linecap:round;stroke-miterlimit:10;}\n\t.st3{fill:none;stroke:#666666;stroke-width:7.449;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n"
-      }
+      {`
+        .st0 { opacity: 1; }
+        .st1 { fill: none; stroke: ${color}; stroke-width: 5.3207; stroke-miterlimit: 10; }
+        .st2 { fill: none; stroke: ${color}; stroke-width: 6.6498; stroke-linecap: round; stroke-miterlimit: 10; }
+        .st3 { fill: none; stroke: ${color}; stroke-width: 7.449; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 10; }
+      `}
     </style>
     <g className="st0">
       <g id="hair">
@@ -64,4 +72,5 @@ const FaceScan = (props: SVGProps<SVGSVGElement>) => (
     </g>
   </svg>
 );
+
 export default FaceScan;

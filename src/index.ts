@@ -1,46 +1,45 @@
-import Box from "./components/Box";
-import Button from "./components/Button";
-import Checkbox from "./components/Checkbox";
-import Dropdown from "./components/Dropdown";
+import { default as Box } from "./components/Box/Box";
+import { default as Button } from "./components/Button";
+import { default as Checkbox } from "./components/Checkbox/Checkbox";
+import { default as Dropdown } from "./components/Dropdown";
 import {
   default as DynamicIcon,
   default as Icon,
 } from "./components/DynamicIcon";
-import Gradient from "./components/Gradient";
-import Input from "./components/Input";
-import KPI from "./components/KPI";
-import Logo from "./components/Logo";
-import Maps from "./components/Map/map";
+import { default as Gradient } from "./components/Gradient/Gradient";
+import { default as Input } from "./components/Input/Input";
+import { default as KPI } from "./components/KPI";
+import { default as Logo } from "./components/Logo";
+import { default as Maps } from "./components/Map/map";
 import {
   NavigationFooter,
   NavigationHeader,
   NavigationSocials,
 } from "./components/NavigationElements";
-import NavItem from "./components/NavigationItem";
-import Password from "./components/Password";
-import Row from "./components/Row";
-import Socials from "./components/Socials";
-import Stack from "./components/Stack";
-import Table from "./components/Table";
-import Text from "./components/Text";
-import VideoCapture from "./components/VideoCapture";
-import IconLocationAdd from "./components/icons/addLocation";
-import IconUserAdd from "./components/icons/addUser";
-import Blank from "./components/icons/blank";
-import CameraSwap from "./components/icons/cameraswap";
-import Dashboard from "./components/icons/dashboard";
-import FaceScan from "./components/icons/facescan";
-import Github from "./components/icons/github";
-import Help from "./components/icons/help";
-import History from "./components/icons/history";
-import Insights from "./components/icons/insights";
-import Linkedin from "./components/icons/linkedin";
-import logo from "./components/icons/logo";
-import LogOut from "./components/icons/logout";
-import Notification from "./components/icons/notification";
-import Profile from "./components/icons/profile";
-import Slack from "./components/icons/slack";
-import Youtube from "./components/icons/youtube";
+import { default as NavItem } from "./components/NavigationItem";
+import { default as Password } from "./components/Password/Password";
+import { default as Row } from "./components/Row/Row";
+import { default as Socials } from "./components/Socials/Socials";
+import { default as Stack } from "./components/Stack/Stack";
+import { default as Table } from "./components/Table/Table";
+import { default as Text } from "./components/Text/Text";
+import { default as VideoCapture } from "./components/VideoCapture";
+import { default as IconLocationAdd } from "./components/icons/addLocation";
+import { default as IconUserAdd } from "./components/icons/addUser";
+import { default as Blank } from "./components/icons/blank";
+import { default as CameraSwap } from "./components/icons/cameraswap";
+import { default as Dashboard } from "./components/icons/dashboard";
+import { default as FaceScan } from "./components/icons/facescan";
+import { default as Github } from "./components/icons/github";
+import { default as Help } from "./components/icons/help";
+import { default as History } from "./components/icons/history";
+import { default as Insights } from "./components/icons/insights";
+import { default as Linkedin } from "./components/icons/linkedin";
+import { default as LogOut } from "./components/icons/logout";
+import { default as Notification } from "./components/icons/notification";
+import { default as Profile } from "./components/icons/profile";
+import { default as Slack } from "./components/icons/slack";
+import { default as Youtube } from "./components/icons/youtube";
 
 export {
   Blank,
@@ -81,5 +80,4 @@ export {
   Text,
   VideoCapture,
   Youtube,
-  logo,
 };
